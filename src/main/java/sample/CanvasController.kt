@@ -1,6 +1,9 @@
 package sample
 
 import javafx.application.Platform
+import javafx.fxml.FXMLLoader
+import javafx.scene.Parent
+import javafx.scene.Scene
 import javafx.scene.canvas.Canvas
 import javafx.scene.control.ChoiceBox
 import javafx.scene.control.RadioButton
@@ -14,6 +17,10 @@ import sample.service.CanvasService
 import sample.service.NodeService
 import java.lang.RuntimeException
 import java.util.*
+import javafx.stage.Modality
+import javafx.stage.Stage
+
+
 
 class CanvasController {
     lateinit var simulationMap: Canvas
@@ -93,6 +100,18 @@ class CanvasController {
                     }
                 }
     }
+    fun openSimulation(museEvent: MouseEvent){
+        val fxmlLoader = FXMLLoader(javaClass.getResource("simulationBoard.fxml"))
+        val root1 = fxmlLoader.load<Any>() as Parent
+        val stage = Stage()
+        //set what you want on your stage
+        stage.initModality(Modality.WINDOW_MODAL)
+        stage.scene = Scene(root1)
+        stage.show()
+    }
+
+
+
 
     private fun prepareBoard() {
         simulationMap.width = anchor.width;

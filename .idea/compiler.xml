@@ -9,8 +9,5 @@
         <module name="artGui" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="artGui" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

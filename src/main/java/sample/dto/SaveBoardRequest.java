@@ -19,4 +19,5 @@ public class SaveBoardRequest {
     }
 
     private BoardDto boardDto;
+
 }

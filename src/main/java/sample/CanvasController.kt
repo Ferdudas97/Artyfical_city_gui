@@ -1,10 +1,12 @@
 package sample
 
+import javafx.application.Platform
 import javafx.event.Event
 import javafx.scene.canvas.Canvas
 import javafx.scene.canvas.GraphicsContext
 import javafx.scene.control.ChoiceBox
 import javafx.scene.control.RadioButton
+import javafx.scene.control.TextField
 import javafx.scene.control.ToggleGroup
 import javafx.scene.image.Image
 import javafx.scene.input.MouseEvent
@@ -21,10 +23,12 @@ class CanvasController {
     lateinit var directionGroup: ToggleGroup
     lateinit var typeGroup: ToggleGroup
     lateinit var boardNames: ChoiceBox<String>
+    lateinit var nameInput: TextField
     var isDrawing = false
     val nodeMap = hashMapOf<Pair<Double, Double>, NodeDto>()
     val retrofit = ApiService.create()
     val nodeSize = 25.0
+    val canvasService = CanvasService()
 
     fun draw(mouseEvent: MouseEvent) {
         if (!isDrawing) {
@@ -33,6 +37,9 @@ class CanvasController {
         } else isDrawing = !isDrawing;
     }
 
+    fun initialize() {
+        updateNames()
+    }
 
     fun drawNode(mouseEvent: MouseEvent) {
         if (isDrawing) {
@@ -49,10 +56,10 @@ class CanvasController {
                     .horizontalPosition(horizontalPosition)
                     .verticalPosition(verticalPosition)
                     .direction(nodeDirection)
-                    .type(nodeType)
+                    .nodeType(nodeType)
                     .nodeId(UUID.randomUUID().toString())
                     .build()
-            nodeMap[Pair(horizontalPosition, verticalPosition)] = node
+            canvasService.addNode(node)
         }
 
     }
@@ -60,26 +67,28 @@ class CanvasController {
     fun save(mouseEvent: MouseEvent) {
         putNeighboors()
         setSpawnId()
-        val request = SaveBoardRequest(BoardDto.of("huj", nodeMap.values.toSet()))
-        retrofit.saveBoard(request).subscribe{lol -> System.out.println("UDALO SIe")}
+        val request = SaveBoardRequest(BoardDto.of(nameInput.text, nodeMap.values.toSet()))
+        retrofit.saveBoard(request).subscribe{ updateNames()}
 
     }
 
-    fun updateBoardNames(event: Event) {
-        retrofit.getAllNames().forEach { list ->
-            boardNames.itemsProperty().get().setAll(list)
-
+    private fun updateNames(){
+        Platform.runLater {
+            retrofit.getAllNames().forEach { list ->
+                boardNames.itemsProperty().get().setAll(list)
+            }
         }
+
     }
 
     fun upload(mouseEvent: MouseEvent) {
         prepareBoard()
-        nodeMap.clear()
+        canvasService.deleteNodes()
         retrofit.uploadBoard(boardNames.value)
                 .map { response -> response.boardDto.nodeDtos }
                 .forEach { nodes ->
                     nodes.forEach { node ->
-                        nodeMap[Pair(node.horizontalPosition, node.verticalPosition)] = node
+                        canvasService.addNode(node)
                         drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
                     }
                 }
@@ -197,14 +206,14 @@ class CanvasController {
     private fun getNextNode(node: NodeDto, delta: Pair<Double, Double>): NodeDto? {
         val nextHorizontal = node.horizontalPosition + delta.first
         val nextVertical = node.verticalPosition + delta.second
-        return nodeMap[Pair(nextHorizontal, nextVertical)]
+        return canvasService.getNode(nextHorizontal, nextVertical)
 
     }
 
     private fun getPreviousNode(node: NodeDto, delta: Pair<Double, Double>): NodeDto? {
         val previousHorizontal = node.horizontalPosition - delta.first
         val previousVertical = node.verticalPosition - delta.second
-        return nodeMap[Pair(previousHorizontal, previousVertical)]
+        return canvasService.getNode(previousHorizontal, previousVertical)
     }
 
 

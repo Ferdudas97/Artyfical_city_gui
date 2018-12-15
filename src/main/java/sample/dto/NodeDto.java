@@ -1,33 +1,130 @@
 package sample.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@AllArgsConstructor
-@Getter
-@NoArgsConstructor
-@Setter
 public class NodeDto {
-    public NodeType nodeType;
-    public NodeDirection direction;
-    public String leftId;
-    public String rightId;
-    public String topId;
-    public String bottomId;
-    public String spawnStreamId; // czy to dostane?
-    public Double maxSpeedAllowed;
-    public Double verticalPosition;
-    public Double horizontalPosition;
-    public String nodeId;
+    private NodeType nodeType;
+    private NodeDirection direction;
+    private String leftId;
+    private String rightId;
+    private String topId;
+    private String bottomId;
+    private String spawnStreamId; // czy to dostane?
+    private Double maxSpeedAllowed;
+    private Double verticalPosition;
+    private Double horizontalPosition;
+    private String nodeId;
+
+    @java.beans.ConstructorProperties({"nodeType", "direction", "leftId", "rightId", "topId", "bottomId", "spawnStreamId", "maxSpeedAllowed", "verticalPosition", "horizontalPosition", "nodeId"})
+    public NodeDto(NodeType nodeType, NodeDirection direction, String leftId, String rightId, String topId, String bottomId, String spawnStreamId, Double maxSpeedAllowed, Double verticalPosition, Double horizontalPosition, String nodeId) {
+        this.nodeType = nodeType;
+        this.direction = direction;
+        this.leftId = leftId;
+        this.rightId = rightId;
+        this.topId = topId;
+        this.bottomId = bottomId;
+        this.spawnStreamId = spawnStreamId;
+        this.maxSpeedAllowed = maxSpeedAllowed;
+        this.verticalPosition = verticalPosition;
+        this.horizontalPosition = horizontalPosition;
+        this.nodeId = nodeId;
+    }
+
+    public NodeDto() {
+    }
 
     public static NodeDtoBuilder builder() {
         return new NodeDtoBuilder();
     }
 
+    public NodeType getNodeType() {
+        return this.nodeType;
+    }
+
+    public NodeDirection getDirection() {
+        return this.direction;
+    }
+
+    public String getLeftId() {
+        return this.leftId;
+    }
+
+    public String getRightId() {
+        return this.rightId;
+    }
+
+    public String getTopId() {
+        return this.topId;
+    }
+
+    public String getBottomId() {
+        return this.bottomId;
+    }
+
+    public String getSpawnStreamId() {
+        return this.spawnStreamId;
+    }
+
+    public Double getMaxSpeedAllowed() {
+        return this.maxSpeedAllowed;
+    }
+
+    public Double getVerticalPosition() {
+        return this.verticalPosition;
+    }
+
+    public Double getHorizontalPosition() {
+        return this.horizontalPosition;
+    }
+
+    public String getNodeId() {
+        return this.nodeId;
+    }
+
+    public void setNodeType(NodeType nodeType) {
+        this.nodeType = nodeType;
+    }
+
+    public void setDirection(NodeDirection direction) {
+        this.direction = direction;
+    }
+
+    public void setLeftId(String leftId) {
+        this.leftId = leftId;
+    }
+
+    public void setRightId(String rightId) {
+        this.rightId = rightId;
+    }
+
+    public void setTopId(String topId) {
+        this.topId = topId;
+    }
+
+    public void setBottomId(String bottomId) {
+        this.bottomId = bottomId;
+    }
+
+    public void setSpawnStreamId(String spawnStreamId) {
+        this.spawnStreamId = spawnStreamId;
+    }
+
+    public void setMaxSpeedAllowed(Double maxSpeedAllowed) {
+        this.maxSpeedAllowed = maxSpeedAllowed;
+    }
+
+    public void setVerticalPosition(Double verticalPosition) {
+        this.verticalPosition = verticalPosition;
+    }
+
+    public void setHorizontalPosition(Double horizontalPosition) {
+        this.horizontalPosition = horizontalPosition;
+    }
+
+    public void setNodeId(String nodeId) {
+        this.nodeId = nodeId;
+    }
+
     public static class NodeDtoBuilder {
-        private NodeType type;
+        private NodeType nodeType;
         private NodeDirection direction;
         private String leftId;
         private String rightId;
@@ -42,111 +139,67 @@ public class NodeDto {
         NodeDtoBuilder() {
         }
 
-        public NodeType getType() {
-            return type;
-        }
-
-        public NodeDirection getDirection() {
-            return direction;
-        }
-
-        public String getLeftId() {
-            return leftId;
-        }
-
-        public String getRightId() {
-            return rightId;
-        }
-
-        public String getTopId() {
-            return topId;
-        }
-
-        public String getBottomId() {
-            return bottomId;
-        }
-
-        public String getSpawnStreamId() {
-            return spawnStreamId;
-        }
-
-        public Double getMaxSpeedAllowed() {
-            return maxSpeedAllowed;
-        }
-
-        public Double getVerticalPosition() {
-            return verticalPosition;
-        }
-
-        public Double getHorizontalPosition() {
-            return horizontalPosition;
-        }
-
-        public String getNodeId() {
-            return nodeId;
-        }
-
-        public NodeDtoBuilder type(NodeType type) {
-            this.type = type;
+        public NodeDto.NodeDtoBuilder nodeType(NodeType nodeType) {
+            this.nodeType = nodeType;
             return this;
         }
 
-        public NodeDtoBuilder direction(NodeDirection direction) {
+        public NodeDto.NodeDtoBuilder direction(NodeDirection direction) {
             this.direction = direction;
             return this;
         }
 
-        public NodeDtoBuilder leftId(String leftId) {
+        public NodeDto.NodeDtoBuilder leftId(String leftId) {
             this.leftId = leftId;
             return this;
         }
 
-        public NodeDtoBuilder rightId(String rightId) {
+        public NodeDto.NodeDtoBuilder rightId(String rightId) {
             this.rightId = rightId;
             return this;
         }
 
-        public NodeDtoBuilder topId(String topId) {
+        public NodeDto.NodeDtoBuilder topId(String topId) {
             this.topId = topId;
             return this;
         }
 
-        public NodeDtoBuilder bottomId(String bottomId) {
+        public NodeDto.NodeDtoBuilder bottomId(String bottomId) {
             this.bottomId = bottomId;
             return this;
         }
 
-        public NodeDtoBuilder spawnStreamId(String spawnStreamId) {
+        public NodeDto.NodeDtoBuilder spawnStreamId(String spawnStreamId) {
             this.spawnStreamId = spawnStreamId;
             return this;
         }
 
-        public NodeDtoBuilder maxSpeedAllowed(Double maxSpeedAllowed) {
+        public NodeDto.NodeDtoBuilder maxSpeedAllowed(Double maxSpeedAllowed) {
             this.maxSpeedAllowed = maxSpeedAllowed;
             return this;
         }
 
-        public NodeDtoBuilder verticalPosition(Double verticalPosition) {
+        public NodeDto.NodeDtoBuilder verticalPosition(Double verticalPosition) {
             this.verticalPosition = verticalPosition;
             return this;
         }
 
-        public NodeDtoBuilder horizontalPosition(Double horizontalPosition) {
+        public NodeDto.NodeDtoBuilder horizontalPosition(Double horizontalPosition) {
             this.horizontalPosition = horizontalPosition;
             return this;
         }
 
-        public NodeDtoBuilder nodeId(String nodeId) {
+        public NodeDto.NodeDtoBuilder nodeId(String nodeId) {
             this.nodeId = nodeId;
             return this;
         }
 
         public NodeDto build() {
-            return new NodeDto(type, direction, leftId, rightId, topId, bottomId, spawnStreamId, maxSpeedAllowed, verticalPosition, horizontalPosition, nodeId);
+            return new NodeDto(nodeType, direction, leftId, rightId, topId, bottomId, spawnStreamId, maxSpeedAllowed, verticalPosition, horizontalPosition, nodeId);
         }
 
         public String toString() {
-            return "NodeDto.NodeDtoBuilder(nodeType=" + this.type + ", direction=" + this.direction + ", leftId=" + this.leftId + ", rightId=" + this.rightId + ", topId=" + this.topId + ", bottomId=" + this.bottomId + ", spawnStreamId=" + this.spawnStreamId + ", maxSpeedAllowed=" + this.maxSpeedAllowed + ", verticalPosition=" + this.verticalPosition + ", horizontalPosition=" + this.horizontalPosition + ", nodeId=" + this.nodeId + ")";
+            return "NodeDto.NodeDtoBuilder(nodeType=" + this.nodeType + ", direction=" + this.direction + ", leftId=" + this.leftId + ", rightId=" + this.rightId + ", topId=" + this.topId + ", bottomId=" + this.bottomId + ", spawnStreamId=" + this.spawnStreamId + ", maxSpeedAllowed=" + this.maxSpeedAllowed + ", verticalPosition=" + this.verticalPosition + ", horizontalPosition=" + this.horizontalPosition + ", nodeId=" + this.nodeId + ")";
         }
     }
 }

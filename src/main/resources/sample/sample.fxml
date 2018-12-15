@@ -5,6 +5,7 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -48,9 +49,10 @@
                 </children>
             </VBox>
             <Button mnemonicParsing="false" onMouseClicked="#draw" prefHeight="26.0" prefWidth="85.0" text="Draw" />
-            <Button mnemonicParsing="false" onMouseClicked="#save" text="Save"  />
-            <Button mnemonicParsing="false" text="Upload" onMouseClicked="#upload"/>
-            <ChoiceBox prefWidth="150.0" fx:id="boardNames" onMouseClicked="#updateBoardNames"/>
+            <TextField fx:id="nameInput" />
+            <Button mnemonicParsing="false" onMouseClicked="#save" text="Save" />
+            <Button mnemonicParsing="false" onMouseClicked="#upload" text="Upload" />
+            <ChoiceBox fx:id="boardNames" prefWidth="150.0" />
          </children>
       </VBox>
       <AnchorPane fx:id="anchor" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">

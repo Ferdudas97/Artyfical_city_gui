@@ -1,18 +1,26 @@
 package sample.dto;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@NoArgsConstructor
-@Setter
-@AllArgsConstructor(staticName = "of")
 public class GetSavedBoardResponse {
-    public BoardDto getBoardDto() {
-        return boardDto;
+    private BoardDto boardDto;
+
+    @java.beans.ConstructorProperties({"boardDto"})
+    private GetSavedBoardResponse(BoardDto boardDto) {
+        this.boardDto = boardDto;
     }
 
-    private BoardDto boardDto;
+    public GetSavedBoardResponse() {
+    }
+
+    public static GetSavedBoardResponse of(BoardDto boardDto) {
+        return new GetSavedBoardResponse(boardDto);
+    }
+
+    public BoardDto getBoardDto() {
+        return this.boardDto;
+    }
+
+    public void setBoardDto(BoardDto boardDto) {
+        this.boardDto = boardDto;
+    }
 }

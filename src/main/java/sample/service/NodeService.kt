@@ -1,4 +1,4 @@
-package sample
+package sample.service
 
 import sample.dto.NodeDirection
 import sample.dto.NodeDto

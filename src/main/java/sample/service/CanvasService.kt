@@ -1,12 +1,10 @@
-package sample
+package sample.service
 
 import javafx.scene.canvas.GraphicsContext
 import javafx.scene.image.Image
 import javafx.scene.paint.Color
 import sample.dto.NodeDirection
-import sample.dto.NodeDto
 import sample.dto.NodeType
-import java.lang.RuntimeException
 
 class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
 

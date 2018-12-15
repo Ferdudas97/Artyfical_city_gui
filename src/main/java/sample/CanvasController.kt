@@ -1,19 +1,17 @@
 package sample
 
 import javafx.application.Platform
-import javafx.event.Event
 import javafx.scene.canvas.Canvas
-import javafx.scene.canvas.GraphicsContext
 import javafx.scene.control.ChoiceBox
 import javafx.scene.control.RadioButton
 import javafx.scene.control.TextField
 import javafx.scene.control.ToggleGroup
-import javafx.scene.image.Image
 import javafx.scene.input.MouseEvent
 import javafx.scene.layout.AnchorPane
-import javafx.scene.paint.Color
 import sample.dto.*
 import sample.service.ApiService
+import sample.service.CanvasService
+import sample.service.NodeService
 import java.lang.RuntimeException
 import java.util.*
 

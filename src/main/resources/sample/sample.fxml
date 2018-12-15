@@ -50,6 +50,7 @@
             <Button mnemonicParsing="false" onMouseClicked="#draw" prefHeight="26.0" prefWidth="85.0" text="Draw" />
             <Button mnemonicParsing="false" onMouseClicked="#save" text="Save"  />
             <Button mnemonicParsing="false" text="Upload" onMouseClicked="#upload"/>
+             <Button mnemonicParsing="false" text="Open simulation" onMouseClicked="#openSimulation"/>
             <ChoiceBox prefWidth="150.0" fx:id="boardNames" onMouseClicked="#updateBoardNames"/>
          </children>
       </VBox>

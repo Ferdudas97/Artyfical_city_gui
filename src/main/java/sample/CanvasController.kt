@@ -1,6 +1,9 @@
 package sample
 
 import javafx.event.Event
+import javafx.fxml.FXMLLoader
+import javafx.scene.Parent
+import javafx.scene.Scene
 import javafx.scene.canvas.Canvas
 import javafx.scene.canvas.GraphicsContext
 import javafx.scene.control.ChoiceBox
@@ -14,6 +17,10 @@ import sample.dto.*
 import sample.service.ApiService
 import java.lang.RuntimeException
 import java.util.*
+import javafx.stage.Modality
+import javafx.stage.Stage
+
+
 
 class CanvasController {
     lateinit var simulationMap: Canvas
@@ -83,6 +90,16 @@ class CanvasController {
                         drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
                     }
                 }
+    }
+    fun openSimulation(museEvent: MouseEvent){
+        val fxmlLoader = FXMLLoader(javaClass.getResource("simulationBoard.fxml"))
+        val root1 = fxmlLoader.load<Any>() as Parent
+        val stage = Stage()
+        //set what you want on your stage
+        stage.initModality(Modality.APPLICATION_MODAL)
+        stage.scene = Scene(root1)
+        stage.isResizable = true
+        stage.show()
     }
 
 

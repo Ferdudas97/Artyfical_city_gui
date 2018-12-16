@@ -30,6 +30,8 @@ class CanvasController {
     lateinit var typeGroup: ToggleGroup
     lateinit var boardNames: ChoiceBox<String>
     lateinit var nameInput: TextField
+    lateinit var sppedInput: TextField
+
     var isDrawing = false
     val retrofit = ApiService.create()
     val nodeSize = 25.0
@@ -48,6 +50,7 @@ class CanvasController {
     fun initialize() {
         updateNames()
         canvasService = CanvasService(simulationMap.graphicsContext2D, nodeSize)
+        sppedInput.setText("50")
     }
 
     fun drawNode(mouseEvent: MouseEvent) {
@@ -60,6 +63,7 @@ class CanvasController {
             val nodeType = getNodeType(selectedRadioType.text)
             val horizontalPosition = computeCoord(mouseEvent.x)
             val verticalPosition = computeCoord(mouseEvent.y)
+            val sppedAllowed = java.lang.Double.parseDouble(sppedInput.text)
             canvasService.drawNode(nodeType, nodeDirection, horizontalPosition, verticalPosition)
             val node = NodeDto.builder()
                     .horizontalPosition(horizontalPosition)
@@ -67,8 +71,11 @@ class CanvasController {
                     .direction(nodeDirection)
                     .nodeType(nodeType)
                     .nodeId(nodeId++.toString())
+                    .maxSpeedAllowed(sppedAllowed)
                     .build()
             nodeService.addNode(node)
+
+
         }
 
     }

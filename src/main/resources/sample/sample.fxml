@@ -46,6 +46,8 @@
                     </RadioButton>
                     <RadioButton mnemonicParsing="false" text="Connector" toggleGroup="$typeGroup" />
                   <RadioButton mnemonicParsing="false" text="Road" toggleGroup="$typeGroup" />
+                    <Label text="Speed"></Label>
+                    <TextField fx:id="sppedInput" />
                 </children>
             </VBox>
             <Button mnemonicParsing="false" onMouseClicked="#draw" prefHeight="26.0" prefWidth="85.0" text="Draw" />

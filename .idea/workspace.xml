@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d2643da0-afb9-4d40-9268-d8d3ec3b38fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="43" column="71" lean-forward="true" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
+            <state relative-caret-position="235">
+              <caret line="38" column="98" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -92,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
@@ -149,9 +148,9 @@
       <find>isSi</find>
       <find>dra</find>
       <find>node</find>
-      <find>speed</find>
       <find>grass</find>
       <find>stop</find>
+      <find>speed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,8 +193,8 @@
         <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/CanvasController.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/SimulationController.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" />
       </list>
     </option>
   </component>
@@ -360,7 +359,7 @@
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544989214293" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544990218882" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -487,7 +486,7 @@
       <workItem from="1544893961415" duration="3868000" />
       <workItem from="1544925494468" duration="5742000" />
       <workItem from="1544955588141" duration="12629000" />
-      <workItem from="1544974567261" duration="14255000" />
+      <workItem from="1544974567261" duration="15289000" />
     </task>
     <task id="LOCAL-00001" summary="simulationController">
       <created>1544897639506</created>
@@ -538,17 +537,24 @@
       <option name="project" value="LOCAL" />
       <updated>1544981261731</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="algorithm is working">
+      <created>1544989311531</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1544989311531</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52575000" />
+    <option name="totallyTimeSpent" value="53609000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25235197" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25235197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -557,7 +563,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4975097" visible="true" weight="0.3925845" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975097" visible="true" weight="0.3925845" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -667,7 +673,8 @@
     <MESSAGE value="lot of dummy stuff" />
     <MESSAGE value="one car is moving now" />
     <MESSAGE value="algorithm improved" />
-    <option name="LAST_COMMIT_MESSAGE" value="algorithm improved" />
+    <MESSAGE value="algorithm is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="algorithm is working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1039,13 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="43" column="71" lean-forward="true" selection-start-line="43" selection-start-column="71" selection-end-line="43" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/SimulationController.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="514">
@@ -1083,6 +1083,13 @@
             <element signature="e#6334#6335#0" expanded="true" />
             <element signature="e#6389#6390#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="38" column="98" selection-start-line="38" selection-start-column="98" selection-end-line="38" selection-end-column="98" />
         </state>
       </provider>
     </entry>

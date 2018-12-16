@@ -36,17 +36,22 @@ class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
         carMap.putIfAbsent(id, pickRandomColor())
         gc.fill = carMap[id]
         val delta = carDeltaInSpecifiedDirection(head.direction, size)
-        gc.fillRect(head.horizontalPosition+nodeSize/4, head.verticalPosition+nodeSize/4, delta.first, delta.second)
+        drawCarInSpecifiedDirection(head.horizontalPosition, head.verticalPosition,head.direction, delta)
+//        gc.fillRect(head.horizontalPosition+nodeSize/4, head.verticalPosition+nodeSize/4, delta.first, delta.second)
     }
 
+    fun drawCarInSpecifiedDirection(x: Double, y: Double, direction: NodeDirection, delta: Pair<Double, Double>) = when (direction) {
+        NodeDirection.LEFT -> gc.fillRect(x, y, delta.first, delta.second)
+        NodeDirection.RIGHT -> gc.fillRect(x - nodeSize, y, delta.first, delta.second)
+        NodeDirection.UP -> gc.fillRect(x, y, delta.first, delta.second)
+        NodeDirection.DOWN -> gc.fillRect(x , y-nodeSize, delta.first, delta.second)
 
-    internal fun foo(string: String): Double? {
-        return java.lang.Double.parseDouble(string)
+
     }
 
-    fun carDeltaInSpecifiedDirection(nodeDirection: NodeDirection, size: Int) = when(nodeDirection) {
-        NodeDirection.DOWN, NodeDirection.UP -> (nodeSize/2) to (nodeSize/2)*size
-        NodeDirection.LEFT ,NodeDirection.RIGHT -> (nodeSize/2)*size to (nodeSize/2)
+    fun carDeltaInSpecifiedDirection(nodeDirection: NodeDirection, size: Int) = when (nodeDirection) {
+        NodeDirection.DOWN, NodeDirection.UP -> (nodeSize) to (nodeSize) * size
+        NodeDirection.LEFT, NodeDirection.RIGHT -> (nodeSize) * size to (nodeSize)
     }
 
 

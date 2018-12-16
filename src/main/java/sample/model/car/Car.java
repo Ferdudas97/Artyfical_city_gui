@@ -43,7 +43,7 @@ public class Car {
                 changeToTheFastestPossible();
             }
             currentSpeed = getMaximumPossibleSpeedOnStrip(head);
-            if (currentSpeed!=0)removePresenceFromPreviousNodes(previousHead);
+            removePresenceFromPreviousNodes(previousHead);
             moveNodes();
         } else {
             CarHolder.removeCar(this);
@@ -51,28 +51,29 @@ public class Car {
 
     }
 
-    private void moveNodes() {
-        for (int i = 0; i < currentSpeed; i++) {
-            if (head.getNeighbors().getRight() != null) head = head.getNeighbors().getRight();
+    private  synchronized void moveNodes() {
+        for (int i = 0; i < currentSpeed.intValue(); i++) {
+            if (head.getNeighbors().getRight() != null && !head.getNeighbors().getRight().getIsTaken()) head = head.getNeighbors().getRight();
         }
         setPresenceToNewNodes(head);
 
     }
 
-    private void changeStrip() {
+
+    private synchronized void changeStrip() {
         Node newHead = getTheNodeWithTheLongestDistance();
         boolean isChanging = randomDecisionAboutChangingStrip(newHead);
-        if (isChanging) head = newHead;
+        if (isChanging && newHead!=null) head = newHead;
     }
 
-    private void changeToTheFastestPossible() {
+    private synchronized void changeToTheFastestPossible() {
         Node nodeWithTheHigherPossibleSpeed = getStripWithMaximumPossibleSpeed();
-        if (head != nodeWithTheHigherPossibleSpeed && randomDecisionAboutChangingStrip(nodeWithTheHigherPossibleSpeed))
+        if (nodeWithTheHigherPossibleSpeed != null && head != nodeWithTheHigherPossibleSpeed && randomDecisionAboutChangingStrip(nodeWithTheHigherPossibleSpeed))
             head = nodeWithTheHigherPossibleSpeed;
 
     }
 
-    private void setPresenceToNewNodes(Node node) {
+    private synchronized void setPresenceToNewNodes(Node node) {
         for (int i = 0; i < size; i++) {
             if (node != null) {
                 node.setCarId(id);
@@ -86,15 +87,24 @@ public class Car {
     private void removePresenceFromPreviousNodes(Node node) {
         for (int i = 0; i < size; i++) {
             if (node != null) {
-                node.setIsTaken(false);
                 node.setCarId(null);
+                node.setIsTaken(false);
                 node = node.getNeighbors().getLeft();
+
             }
         }
     }
 
+    public static void main(String[] args) {
+        Double x = 5.9;
+        for (int i = 0; i <x.intValue(); i++) {
+            System.out.println(i);
+        }
+        System.out.println(x.intValue());
+    }
     private boolean isStripEndingSoon(Node node, int speed) {
         int distance = 0;
+        if (speed==0) return true;
         while (speed - 1 > distance && node != null) {
             node = node.getNeighbors().getRight();
             distance++;
@@ -104,14 +114,15 @@ public class Car {
     }
 
     private Node getTheNodeWithTheLongestDistance() {
-        return Stream.of(head.getNeighbors().getTop(), head.getNeighbors().getBottom(), head)
+        return Stream.of(head.getNeighbors().getTop(), head.getNeighbors().getBottom())
                 .collect(Collectors.toMap(Function.identity(), this::checkStripDistance,(a,b) ->a))
                 .entrySet()
                 .stream()
                 .filter(e ->e.getValue()>0)
                 .max(Comparator.comparing(Map.Entry::getValue))
-                .get()
-                .getKey();
+                .map(Map.Entry::getKey)
+                .orElse(null);
+
     }
 
 
@@ -119,7 +130,7 @@ public class Car {
         val random = new Random();
         val difference = getDifferenceBeetwenDistanceAndSpeedOfTheClosestCar(node);
         int probabilty;
-        if (difference > 0) probabilty = 9;
+        if (difference > 0) probabilty = 8;
         else probabilty = 2;
         return random.nextInt(10) <= probabilty;
     }
@@ -134,7 +145,7 @@ public class Car {
                 .map(Node::getCarId)
                 .map(CarHolder.cars::get)
                 .map(Car::getCurrentSpeed)
-                .orElse(0.0);
+                .orElse(-1.0);
 
         return distance - carSpeed;
 
@@ -142,21 +153,27 @@ public class Car {
 
     private Node getStripWithMaximumPossibleSpeed() {
         val headSpead = getMaximumPossibleSpeedOnStrip(head);
-        return Stream.of(head.getNeighbors().getTop(), head.getNeighbors().getBottom(),head)
+        val max = Stream.of(head.getNeighbors().getTop(), head.getNeighbors().getBottom())
                 .collect(Collectors.toMap(Function.identity(), this::getMaximumPossibleSpeedOnStrip, (a, b) -> a))
                 .entrySet()
                 .stream()
                 .filter(e ->e.getValue()>0)
                 .max(Comparator.comparing(Map.Entry::getValue))
                 .filter(e -> e.getValue() > headSpead)
-                .map(Map.Entry::getKey)
-                .orElse(head);
+                .map(Map.Entry::getKey);
+        if (max.isPresent()) return max.get();
+        if (headSpead>0) return head;
+        else return null;
     }
 
     private Double getMaximumPossibleSpeedOnStrip(Node node) {
+        if(node !=null) {
             int dist = checkStripDistance(node);
             if (shouldBrake(dist)) return brakeSpeed(dist);
-            else return acceleratedSpeed();
+            if (dist!=0) return acceleratedSpeed();
+            else return 0.0;
+        }
+        else return 0.0;
     }
 
     private boolean shouldBrake(final int distance) {
@@ -166,7 +183,7 @@ public class Car {
     private int checkStripDistance(Node node) {
         int dist = 0;
         //lub         while (node != null && !node.getIsTaken()) {
-        while ((node != null && !node.getIsTaken() && dist < maxSpeed) || node == head) {
+        while ((node != null && !node.getIsTaken()) || node == head) {
             dist++;
             node = node.getNeighbors().getRight();
         }
@@ -178,7 +195,7 @@ public class Car {
     }
 
     private Double brakeSpeed(int dist) {
-        return Math.min(currentSpeed, dist - 3);
+        return Math.max(Math.min(currentSpeed, dist - 1),0);
     }
 
 }

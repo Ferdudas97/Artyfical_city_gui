@@ -36,12 +36,13 @@ class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
         carMap.putIfAbsent(id, pickRandomColor())
         gc.fill = carMap[id]
         val delta = carDeltaInSpecifiedDirection(head.direction, size)
-        gc.fillRect(head.horizontalPosition+nodeSize/4, head.verticalPosition+nodeSize/4, delta.first, delta.second)
+        gc.fillRect(head.horizontalPosition, head.verticalPosition, delta.first, delta.second)
+//        gc.fillRect(head.horizontalPosition+nodeSize/4, head.verticalPosition+nodeSize/4, delta.first, delta.second)
     }
 
     fun carDeltaInSpecifiedDirection(nodeDirection: NodeDirection, size: Int) = when(nodeDirection) {
-        NodeDirection.DOWN, NodeDirection.UP -> (nodeSize/2) to (nodeSize/2)*size
-        NodeDirection.LEFT ,NodeDirection.RIGHT -> (nodeSize/2)*size to (nodeSize/2)
+        NodeDirection.DOWN, NodeDirection.UP -> (nodeSize) to (nodeSize)*size
+        NodeDirection.LEFT ,NodeDirection.RIGHT -> (nodeSize)*size to (nodeSize)
     }
 
 

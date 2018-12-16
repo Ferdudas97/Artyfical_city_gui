@@ -25,7 +25,7 @@ public class Car {
     public Car(final Node head, final int size, final Double maxSpeed) {
         this.id = CarId.of(idIterator.toString());
         idIterator++;
-        this.accelerationFunction = speed -> 0.0;
+        this.accelerationFunction = speed -> 0.5;
         this.head = head;
         this.size = size;
         this.maxSpeed = maxSpeed;
@@ -43,15 +43,17 @@ public class Car {
                 changeToTheFastestPossible();
             }
             currentSpeed = getMaximumPossibleSpeedOnStrip(head);
-            removePresenceFromPreviousNodes(previousHead);
+            if (currentSpeed!=0)removePresenceFromPreviousNodes(previousHead);
             moveNodes();
+        } else {
+            CarHolder.removeCar(this);
         }
 
     }
 
     private void moveNodes() {
         for (int i = 0; i < currentSpeed; i++) {
-            head = head.getNeighbors().getRight();
+            if (head.getNeighbors().getRight() != null) head = head.getNeighbors().getRight();
         }
         setPresenceToNewNodes(head);
 
@@ -103,9 +105,10 @@ public class Car {
 
     private Node getTheNodeWithTheLongestDistance() {
         return Stream.of(head.getNeighbors().getTop(), head.getNeighbors().getBottom(), head)
-                .collect(Collectors.toMap(Function.identity(), this::checkStripDistance))
+                .collect(Collectors.toMap(Function.identity(), this::checkStripDistance,(a,b) ->a))
                 .entrySet()
                 .stream()
+                .filter(e ->e.getValue()>0)
                 .max(Comparator.comparing(Map.Entry::getValue))
                 .get()
                 .getKey();
@@ -139,25 +142,21 @@ public class Car {
 
     private Node getStripWithMaximumPossibleSpeed() {
         val headSpead = getMaximumPossibleSpeedOnStrip(head);
-        val node = Stream.of(head.getNeighbors().getTop(), head.getNeighbors().getBottom())
-                .collect(Collectors.toMap(Function.identity(), this::getMaximumPossibleSpeedOnStrip))
+        return Stream.of(head.getNeighbors().getTop(), head.getNeighbors().getBottom(),head)
+                .collect(Collectors.toMap(Function.identity(), this::getMaximumPossibleSpeedOnStrip, (a, b) -> a))
                 .entrySet()
                 .stream()
+                .filter(e ->e.getValue()>0)
                 .max(Comparator.comparing(Map.Entry::getValue))
                 .filter(e -> e.getValue() > headSpead)
                 .map(Map.Entry::getKey)
                 .orElse(head);
-        return node;
     }
 
     private Double getMaximumPossibleSpeedOnStrip(Node node) {
-        int dist = 0;
-        while ((node != null && !node.getIsTaken() && dist < maxSpeed) || node==head) {
-            dist++;
-            node = node.getNeighbors().getRight();
-        }
-        if (shouldBrake(dist)) return brakeSpeed(dist);
-        else return acceleratedSpeed();
+            int dist = checkStripDistance(node);
+            if (shouldBrake(dist)) return brakeSpeed(dist);
+            else return acceleratedSpeed();
     }
 
     private boolean shouldBrake(final int distance) {
@@ -167,7 +166,7 @@ public class Car {
     private int checkStripDistance(Node node) {
         int dist = 0;
         //lub         while (node != null && !node.getIsTaken()) {
-        while (node != null) {
+        while ((node != null && !node.getIsTaken() && dist < maxSpeed) || node == head) {
             dist++;
             node = node.getNeighbors().getRight();
         }
@@ -179,7 +178,7 @@ public class Car {
     }
 
     private Double brakeSpeed(int dist) {
-        return Math.min(currentSpeed, dist - 1);
+        return Math.min(currentSpeed, dist - 3);
     }
 
 }

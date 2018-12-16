@@ -34,7 +34,7 @@ class CanvasController {
 
     var isDrawing = false
     val retrofit = ApiService.create()
-    val nodeSize = 25.0
+    val nodeSize = 15.0
     lateinit var canvasService: CanvasService
     var nodeId = 1;
     val nodeService: NodeService = NodeService(nodeSize)

@@ -5,9 +5,11 @@ import javafx.scene.image.Image
 import javafx.scene.paint.Color
 import sample.model.node.NodeDirection
 import sample.model.node.NodeType
+import kotlin.random.Random
 
 class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
 
+    val carMap = HashMap<String,Color>()
     fun drawNode(type: NodeType, direction: NodeDirection, x: Double, y: Double) {
         val image = getImage(direction, type)
         gc.drawImage(image, x, y)
@@ -26,6 +28,16 @@ class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
         NodeDirection.LEFT -> Image("sample/img/road_left.png", nodeSize, nodeSize, true, true)
         NodeDirection.RIGHT -> Image("sample/img/road_right.png", nodeSize, nodeSize, true, true)
     }
+
+
+
+    fun drawCar(id:String, x:Double, y:Double, size: Int) {
+        carMap.putIfAbsent(id,pickRandomColor())
+        gc.fill= carMap[id]
+        gc.fillRect(x,y, nodeSize/2*size, nodeSize/2)
+    }
+
+    private fun pickRandomColor() =  Color(Random.nextDouble(), Random.nextDouble(), Random.nextDouble(), Random.nextDouble());
 
     fun drawGrid(width: Double, height: Double) = gc.drawGrid(width, height)
 

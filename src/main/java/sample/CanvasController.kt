@@ -34,6 +34,7 @@ class CanvasController {
     val retrofit = ApiService.create()
     val nodeSize = 25.0
     lateinit var canvasService: CanvasService
+    var nodeId = 1;
     val nodeService: NodeService = NodeService(nodeSize)
 
 
@@ -65,7 +66,7 @@ class CanvasController {
                     .verticalPosition(verticalPosition)
                     .direction(nodeDirection)
                     .nodeType(nodeType)
-                    .nodeId(UUID.randomUUID().toString())
+                    .nodeId(nodeId++.toString())
                     .build()
             nodeService.addNode(node)
         }

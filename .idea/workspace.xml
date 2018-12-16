@@ -2,36 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2643da0-afb9-4d40-9268-d8d3ec3b38fa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/CarId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/CarType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/common/Pair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/CrossroadNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/Neighbors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/Node.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/NodeDirection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/NodeId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/NodePosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/NodeType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/RoadNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/SpawnCarNode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStreamId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/service/NodeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/service/SimulationInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/CanvasController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/CanvasController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/SimulationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SimulationController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/dto/NodeDirection.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/dto/NodeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/dto/NodeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/dto/NodeType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/common/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/common/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/node/NodePosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/NodePosition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStreamId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStreamId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,14 +25,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="75" column="56" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
+            <state relative-caret-position="364">
+              <caret line="87" lean-forward="true" selection-start-line="75" selection-end-line="87" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3772#3773#0" expanded="true" />
+                <element signature="e#4397#4398#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -58,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="285">
+              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,10 +51,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/CanvasController.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="132" selection-start-line="132" selection-end-line="132" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+            <state relative-caret-position="180">
+              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -79,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            <state relative-caret-position="-10">
+              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#805#806#0" expanded="true" />
@@ -95,41 +87,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+            <state relative-caret-position="150">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
-                <element signature="e#450#451#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5021#5022#0" expanded="true" />
-                <element signature="e#5535#5536#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/NodeDto.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="166">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1858#1859#0" expanded="true" />
-                <element signature="e#1894#1895#0" expanded="true" />
-                <element signature="e#2620#2621#0" expanded="true" />
-                <element signature="e#2658#2659#0" expanded="true" />
+                <element signature="e#5183#5184#0" expanded="true" />
+                <element signature="e#5239#5240#0" expanded="true" />
+                <element signature="e#5698#5699#0" expanded="true" />
+                <element signature="e#5753#5754#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,32 +115,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/SimulationController.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="355">
+              <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/common/Pair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="135">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/TestHandler.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-              <folding>
-                <element signature="e#24#121#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -183,6 +159,9 @@
     <findStrings>
       <find>uploadB</find>
       <find>init</find>
+      <find>start</find>
+      <find>CarFactory</find>
+      <find>spawnCars</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -207,24 +186,26 @@
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/NodeDirection.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/service/model/node/NodeDirection.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/SpawnCarNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/dto/NodeDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStream.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/CanvasController.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/RoadNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/CrossroadNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/SimulationController.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStreamId.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/service/NodeMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/node/NodePosition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/CanvasController.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStreamId.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/common/Pair.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/SimulationController.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -264,7 +245,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -339,6 +319,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="artGui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artGui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="node" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -359,27 +349,20 @@
             </path>
             <path>
               <item name="artGui" type="b2602c69:ProjectViewProjectNode" />
-              <item name="artGui" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="artGui" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544931013125" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544970112969" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -407,7 +390,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -421,6 +404,20 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimulationServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample.service.SimulationServiceImpl" />
+      <module name="artGui" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -460,6 +457,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SimulationServiceImpl" />
       </list>
     </recent_temporary>
   </component>
@@ -474,7 +472,8 @@
       <option name="presentableId" value="Default" />
       <updated>1544893957283</updated>
       <workItem from="1544893961415" duration="3868000" />
-      <workItem from="1544925494468" duration="5465000" />
+      <workItem from="1544925494468" duration="5742000" />
+      <workItem from="1544955588141" duration="12261000" />
     </task>
     <task id="LOCAL-00001" summary="simulationController">
       <created>1544897639506</created>
@@ -504,16 +503,24 @@
       <option name="project" value="LOCAL" />
       <updated>1544925524939</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="lot of dummy stuff">
+      <created>1544931053769</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544931053769</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25414000" />
+    <option name="totallyTimeSpent" value="37952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25235197" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25235197" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -522,8 +529,8 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4975097" visible="true" weight="0.3925845" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975097" weight="0.3925845" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -628,55 +635,132 @@
     <MESSAGE value="clean" />
     <MESSAGE value="Merge branch 'master' of https://github.com/Ferdudas97/Artyfical_city_gui&#10;&#10;# Conflicts:&#10;#&#9;.gitignore&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;src/main/java/sample/CanvasController.kt" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="lot of dummy stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="lot of dummy stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
-          <line>36</line>
+          <line>38</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
-          <line>43</line>
+          <line>45</line>
           <properties />
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>115</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>149</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>118</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java</url>
+          <line>146</line>
+          <properties>
+            <option name="lambda-ordinal" value="0" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/BoardDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/SaveBoardRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/GetSavedBoardRequest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -698,20 +782,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/NodeDirection.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/NodeDirection.kt" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/sample/simulationBoard.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -730,76 +808,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/NodeType.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/NodePosition.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/NodeDirection.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/car/CarFactory.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/spawn/SpawnStream.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/NodeType.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/car/Car.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/spawn/SpawnNodeHolder.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/RoadNode.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/NodeId.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/NodePosition.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/car/CarHolder.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/NodeDirection.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/SpawnCarNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/car/CarFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/spawn/SpawnStream.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/NodeType.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/car/Car.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/spawn/SpawnNodeHolder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/RoadNode.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/NodeId.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/NodePosition.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/car/CarHolder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/model/node/NodeDirection.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/ApiService.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="22" lean-forward="true" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="596">
-          <caret line="59" lean-forward="true" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#24#83#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,21 +858,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStreamId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#199#200#0" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava2/rxjava/2.0.4/rxjava-2.0.4.jar!/io/reactivex/internal/observers/LambdaObserver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -859,13 +869,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="211" column="6" selection-start-line="211" selection-start-column="6" selection-end-line="211" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/CanvasController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="135" column="20" lean-forward="true" selection-start-line="135" selection-start-column="20" selection-end-line="135" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -890,16 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/NodeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/reactivex/rxjava2/rxjava/2.0.4/rxjava-2.0.4.jar!/io/reactivex/internal/operators/observable/ObservableInterval.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
@@ -917,10 +910,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/NodeDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1894#1895#0" expanded="true" />
+            <element signature="e#2620#2621#0" expanded="true" />
+            <element signature="e#2658#2659#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/TestHandler.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="e#24#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/NodePosition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding>
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/Neighbors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStreamId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding>
+            <element signature="e#171#172#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+            <element signature="e#351#352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
+        <state relative-caret-position="239">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/NodeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="62" column="45" selection-start-line="62" selection-start-column="45" selection-end-line="62" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/SpawnCarNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -933,77 +1023,44 @@
           <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/SimulationController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/TestHandler.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-          <folding>
-            <element signature="e#24#121#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
+        <state relative-caret-position="150">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/NodeDto.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1858#1859#0" expanded="true" />
-            <element signature="e#1894#1895#0" expanded="true" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2658#2659#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/common/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="75" column="56" selection-start-line="75" selection-start-column="56" selection-end-line="75" selection-end-column="56" />
+        <state relative-caret-position="135">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3772#3773#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="-10">
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#805#806#0" expanded="true" />
@@ -1016,19 +1073,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        <state relative-caret-position="180">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/CanvasController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/SimulationController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="106" lean-forward="true" selection-start-line="106" selection-end-line="106" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
+        <state relative-caret-position="166">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5021#5022#0" expanded="true" />
-            <element signature="e#5535#5536#0" expanded="true" />
+            <element signature="e#5183#5184#0" expanded="true" />
+            <element signature="e#5239#5240#0" expanded="true" />
+            <element signature="e#5698#5699#0" expanded="true" />
+            <element signature="e#5753#5754#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="87" lean-forward="true" selection-start-line="75" selection-end-line="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4397#4398#0" expanded="true" />
           </folding>
         </state>
       </provider>

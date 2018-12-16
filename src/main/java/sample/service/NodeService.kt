@@ -25,7 +25,7 @@ class NodeService(var nodeSize: Double) {
 
     fun setSpawnStreams() {
         var id = 0;
-        nodeMap.values.filter { node -> (node.nodeType == NodeType.SPAWN) and (node.spawnStreamId == null) }
+        nodeMap.values.filter { node -> (node.nodeType == NodeType.SPAWN) }
                 .forEach { node -> setSpawnStreamId(node, id++) }
     }
 
@@ -40,7 +40,7 @@ class NodeService(var nodeSize: Double) {
         }
         while (previousNode != null && checkSpawnDirection(node.direction, previousNode)) {
             previousNode.spawnStreamId = streamId.toString()
-            previousNode = getNextNode(previousNode, delta)
+            previousNode = getPreviousNode(previousNode, delta)
         }
     }
 
@@ -66,6 +66,7 @@ class NodeService(var nodeSize: Double) {
 
 
     }
-    private fun checkSpawnDirection(direction: NodeDirection, comparedNode: NodeDto) = comparedNode.nodeType == NodeType.SPAWN && comparedNode.direction == direction
+    private fun checkSpawnDirection(direction: NodeDirection, comparedNode: NodeDto) =
+            comparedNode.nodeType == NodeType.SPAWN && comparedNode.direction == direction
 
 }

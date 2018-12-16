@@ -1,6 +1,9 @@
 package sample.model.node.spawn;
 
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
 public class SpawnStreamId {
     private String id;
 

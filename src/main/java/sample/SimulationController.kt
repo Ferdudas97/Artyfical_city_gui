@@ -2,6 +2,7 @@ package sample
 
 import com.launchdarkly.eventsource.EventSource
 import io.reactivex.Observable
+import io.reactivex.Scheduler
 import javafx.application.Platform
 import javafx.event.Event
 import javafx.geometry.Orientation
@@ -14,15 +15,17 @@ import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
 import sample.dto.ChangeSimulationDetailsRequest
 import sample.dto.NodeDto
+import sample.model.car.CarHolder
 import sample.model.node.NodeType
 import sample.model.node.spawn.SpawnStream
 import sample.model.node.spawn.SpawnStreamId
 import sample.service.*
 import java.net.URI
 import java.util.*
+import java.util.concurrent.TimeUnit
 
 
-class SimulationController{
+class SimulationController {
     val retrofit = ApiService.create()
     lateinit var boardNames: ChoiceBox<String>
     lateinit var simulationMap: Canvas
@@ -101,6 +104,7 @@ class SimulationController{
                     nodes.forEach { node ->
                         nodeService.addNode(node)
                         canvasService.drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
+
                     }
                 }
         getSpawnStreams()
@@ -111,20 +115,30 @@ class SimulationController{
 
     fun startSimulaton(mouseEvent: MouseEvent) {
         simulationService.changeSimulationInfo(prepareSimulationDetails())
-        simulationService.startSimulation()
+        simulationService.startSimulation().subscribe{
+            nodeService.getAllNodes().forEach{node->
+                canvasService.drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
 
-        Observable.fromCallable{simulationService.newCarPosition}
+            }
+            simulationService.headAndSizes().forEach{ e ->canvasService.drawCar(e.key,
+                    e.value.first.horiziontalPosition,
+                    e.value.first.verticalPosition,
+                    e.value.second)
+
+            }
+
+        }
     }
 
     fun getSimulationData() {
-
+       // CarHolder.getAllCars().forEach {canvasService.drawCar(i) }
 
     }
 
     private fun prepareSimulationDetails(): SimulationInfo {
         val streams = sliders.filter { it.key != "SPEED" }.entries.associate { SpawnStreamId.of(it.key) to it.value.value.toInt() }
         val speed = sliders["SPEED"]?.value?.toInt()
-        return SimulationInfo.of( streams,  speed?:1)
+        return SimulationInfo.of(streams, speed ?: 1)
     }
 
     private fun prepareBoard() {

@@ -20,7 +20,7 @@ public class CarFactory {
         creatorMap = new HashMap<>();
         creatorMap.put(CarType.BIG, node -> new Car(node,4,2.0));
         creatorMap.put(CarType.MEDIUM, node -> new Car(node,2,3.0));
-        creatorMap.put(CarType.SMALL, node -> new Car(node,1,4.0));
+        creatorMap.put(CarType.SMALL, node -> new Car(node,1,1.0));
 
     }
 }

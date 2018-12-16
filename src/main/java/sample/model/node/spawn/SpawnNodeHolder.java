@@ -13,7 +13,7 @@ public class SpawnNodeHolder {
     private  static Map<SpawnStreamId, SpawnStream> spawnStreams  = new ConcurrentHashMap<>();
 
     public synchronized static Car spawnCar(final SpawnStreamId id) {
-        return spawnStreams.values().stream().map(SpawnStream::spawnCar).findFirst().get();
+        return spawnStreams.get(id).spawnCar();
     }
 
     public static void addToSpawnStrem(SpawnCarNode spawnCarNode) {

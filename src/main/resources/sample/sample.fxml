@@ -28,7 +28,7 @@
                 <children>
                   <Label text="Direction" />
 
-                    <RadioButton mnemonicParsing="false" text="Left">
+                    <RadioButton mnemonicParsing="false" text="Left"  selected="true">
                      <toggleGroup>
                         <ToggleGroup fx:id="directionGroup" />
                      </toggleGroup>
@@ -39,7 +39,7 @@
                     <RadioButton mnemonicParsing="false" text="Top" toggleGroup="$directionGroup" />
                     <RadioButton mnemonicParsing="false" text="Bottom" toggleGroup="$directionGroup" />
                   <Label text="Type" />
-                    <RadioButton mnemonicParsing="false" text="Spawn">
+                    <RadioButton mnemonicParsing="false" text="Spawn" selected="true">
                         <toggleGroup>
                             <ToggleGroup fx:id="typeGroup" />
                         </toggleGroup>

@@ -136,7 +136,7 @@ class CanvasController {
         "Left" -> NodeDirection.LEFT
         "Right" -> NodeDirection.RIGHT
         "Top" -> NodeDirection.UP
-        "Down" -> NodeDirection.DOWN
+        "Bottom" -> NodeDirection.DOWN
         else -> throw RuntimeException()
     }
 

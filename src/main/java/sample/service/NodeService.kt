@@ -1,8 +1,8 @@
 package sample.service
 
-import sample.dto.NodeDirection
 import sample.dto.NodeDto
-import sample.dto.NodeType
+import sample.model.node.NodeDirection
+import sample.model.node.NodeType
 
 class NodeService(var nodeSize: Double) {
     val nodeMap = hashMapOf<Pair<Double, Double>, NodeDto>()

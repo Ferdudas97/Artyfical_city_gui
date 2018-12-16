@@ -1,6 +1,7 @@
 package sample
 
 import com.launchdarkly.eventsource.EventSource
+import io.reactivex.Observable
 import javafx.application.Platform
 import javafx.event.Event
 import javafx.geometry.Orientation
@@ -11,19 +12,14 @@ import javafx.scene.control.Slider
 import javafx.scene.input.MouseEvent
 import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
-import okhttp3.Request
 import sample.dto.ChangeSimulationDetailsRequest
 import sample.dto.NodeDto
-import sample.dto.NodeType
-import sample.service.ApiService
-import sample.service.CanvasService
-import sample.service.NodeService
-import org.springframework.web.socket.sockjs.transport.handler.EventSourceTransportHandler
-import sample.service.TestHandler
+import sample.model.node.NodeType
+import sample.model.node.spawn.SpawnStream
+import sample.model.node.spawn.SpawnStreamId
+import sample.service.*
 import java.net.URI
-import java.util.concurrent.TimeUnit
-
-
+import java.util.*
 
 
 class SimulationController{
@@ -36,7 +32,7 @@ class SimulationController{
     val nodeService = NodeService(nodeSize)
     val sliders = hashMapOf<String, Slider>()
     lateinit var canvasService: CanvasService
-
+    lateinit var simulationService: SimulationService
 
     fun initialize() {
         canvasService = CanvasService(simulationMap.graphicsContext2D, nodeSize)
@@ -109,32 +105,26 @@ class SimulationController{
                 }
         getSpawnStreams()
         getSimulationData()
+        simulationService = SimulationServiceImpl(nodeService.getAllNodes())
+        simulationService.init()
     }
 
     fun startSimulaton(mouseEvent: MouseEvent) {
-        retrofit.saveDetails(prepareSimulationDetails()).subscribe()
+        simulationService.changeSimulationInfo(prepareSimulationDetails())
+        simulationService.startSimulation()
 
+        Observable.fromCallable{simulationService.newCarPosition}
     }
 
     fun getSimulationData() {
-        Platform.runLater{
-            val eventHandler = TestHandler()
-            val url = String.format("http://localhost:8080/api/simulation")
-            val builder = EventSource.Builder(eventHandler, URI.create(url)).method("GET")
 
-            builder.build().use { eventSource ->
-                eventSource.start()
-
-            }
-
-        }
 
     }
 
-    private fun prepareSimulationDetails(): ChangeSimulationDetailsRequest {
-        val streams = sliders.filter { it.key != "SPEED" }.entries.associate { it.key to it.value.value.toInt() }
+    private fun prepareSimulationDetails(): SimulationInfo {
+        val streams = sliders.filter { it.key != "SPEED" }.entries.associate { SpawnStreamId.of(it.key) to it.value.value.toInt() }
         val speed = sliders["SPEED"]?.value?.toInt()
-        return ChangeSimulationDetailsRequest(streamProduction = streams, simulationSpeed = speed?:1)
+        return SimulationInfo.of( streams,  speed?:1)
     }
 
     private fun prepareBoard() {

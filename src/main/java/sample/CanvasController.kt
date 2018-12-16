@@ -19,7 +19,8 @@ import java.lang.RuntimeException
 import java.util.*
 import javafx.stage.Modality
 import javafx.stage.Stage
-
+import sample.model.node.NodeDirection
+import sample.model.node.NodeType
 
 
 class CanvasController {

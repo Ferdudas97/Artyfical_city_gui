@@ -3,8 +3,8 @@ package sample.service
 import javafx.scene.canvas.GraphicsContext
 import javafx.scene.image.Image
 import javafx.scene.paint.Color
-import sample.dto.NodeDirection
-import sample.dto.NodeType
+import sample.model.node.NodeDirection
+import sample.model.node.NodeType
 
 class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
 

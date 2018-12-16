@@ -1,5 +1,8 @@
 package sample.dto;
 
+import sample.model.node.NodeDirection;
+import sample.model.node.NodeType;
+
 public class NodeDto {
     private NodeType nodeType;
     private NodeDirection direction;

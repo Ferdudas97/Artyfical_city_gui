@@ -7,6 +7,7 @@ import javafx.application.Platform
 import javafx.event.Event
 import javafx.geometry.Orientation
 import javafx.scene.canvas.Canvas
+import javafx.scene.control.Button
 import javafx.scene.control.ChoiceBox
 import javafx.scene.control.Label
 import javafx.scene.control.Slider
@@ -26,17 +27,17 @@ import java.util.concurrent.TimeUnit
 
 
 class SimulationController {
-    val retrofit = ApiService.create()
+    private val retrofit = ApiService.create()
     lateinit var boardNames: ChoiceBox<String>
     lateinit var simulationMap: Canvas
     lateinit var anchor: AnchorPane
     lateinit var slidersVBox: VBox
-    val nodeSize = 25.0
-    val nodeService = NodeService(nodeSize)
-    val sliders = hashMapOf<String, Slider>()
+    val nodeSize = 15.0
+    private val nodeService = NodeService(nodeSize)
+    private val sliders = hashMapOf<String, Slider>()
     lateinit var canvasService: CanvasService
     lateinit var simulationService: SimulationService
-
+    lateinit var simulationButton: Button
     fun initialize() {
         canvasService = CanvasService(simulationMap.graphicsContext2D, nodeSize)
     }
@@ -114,24 +115,30 @@ class SimulationController {
     }
 
     fun startSimulaton(mouseEvent: MouseEvent) {
-        simulationService.changeSimulationInfo(prepareSimulationDetails())
-        simulationService.startSimulation().subscribe{
-            nodeService.getAllNodes().forEach{node->
-                canvasService.drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
+        if (!simulationService.isSimulating) {
+            simulationService.changeSimulationInfo(prepareSimulationDetails())
+            simulationService.startSimulation().subscribe {
+                nodeService.getAllNodes().forEach { node ->
+                    canvasService.drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
+
+                }
+                simulationService.headAndSizes().forEach { e ->
+                    canvasService.drawCar(e.key,
+                            e.value.second, nodeService.getNode(e.value.first.horiziontalPosition,e.value.first.verticalPosition)!! )
+
+                }
 
             }
-            simulationService.headAndSizes().forEach{ e ->canvasService.drawCar(e.key,
-                    e.value.first.horiziontalPosition,
-                    e.value.first.verticalPosition,
-                    e.value.second)
-
-            }
+            simulationButton.text = "Stop simulation"
+        } else {
+            simulationService.stopSimulation()
+            simulationButton.text ="Start simulation"
 
         }
     }
 
     fun getSimulationData() {
-       // CarHolder.getAllCars().forEach {canvasService.drawCar(i) }
+        // CarHolder.getAllCars().forEach {canvasService.drawCar(i) }
 
     }
 

@@ -3,13 +3,15 @@ package sample.service
 import javafx.scene.canvas.GraphicsContext
 import javafx.scene.image.Image
 import javafx.scene.paint.Color
+import org.w3c.dom.NamedNodeMap
+import sample.dto.NodeDto
 import sample.model.node.NodeDirection
 import sample.model.node.NodeType
 import kotlin.random.Random
 
 class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
 
-    val carMap = HashMap<String,Color>()
+    val carMap = HashMap<String, Color>()
     fun drawNode(type: NodeType, direction: NodeDirection, x: Double, y: Double) {
         val image = getImage(direction, type)
         gc.drawImage(image, x, y)
@@ -30,14 +32,20 @@ class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
     }
 
 
-
-    fun drawCar(id:String, x:Double, y:Double, size: Int) {
-        carMap.putIfAbsent(id,pickRandomColor())
-        gc.fill= carMap[id]
-        gc.fillRect(x,y, nodeSize/2*size, nodeSize/2)
+    fun drawCar(id: String, size: Int, head: NodeDto) {
+        carMap.putIfAbsent(id, pickRandomColor())
+        gc.fill = carMap[id]
+        val delta = carDeltaInSpecifiedDirection(head.direction, size)
+        gc.fillRect(head.horizontalPosition+nodeSize/4, head.verticalPosition+nodeSize/4, delta.first, delta.second)
     }
 
-    private fun pickRandomColor() =  Color(Random.nextDouble(), Random.nextDouble(), Random.nextDouble(), Random.nextDouble());
+    fun carDeltaInSpecifiedDirection(nodeDirection: NodeDirection, size: Int) = when(nodeDirection) {
+        NodeDirection.DOWN, NodeDirection.UP -> (nodeSize/2) to (nodeSize/2)*size
+        NodeDirection.LEFT ,NodeDirection.RIGHT -> (nodeSize/2)*size to (nodeSize/2)
+    }
+
+
+    private fun pickRandomColor() = Color(Random.nextDouble() % 256, Random.nextDouble() % 256, Random.nextDouble() % 256, 1.0)
 
     fun drawGrid(width: Double, height: Double) = gc.drawGrid(width, height)
 

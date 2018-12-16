@@ -1,7 +1,4 @@
- package sample.service;
-
-
-
+package sample.service;
 
 
 import io.reactivex.Observable;
@@ -28,10 +25,7 @@ import sample.service.NodeMapper;
 import sample.service.SimulationInfo;
 import sample.service.SimulationService;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -43,6 +37,7 @@ public class SimulationServiceImpl implements SimulationService {
     private SimulationInfo simulationInfo;
     private List<Disposable> spawnDisposables;
     private List<Disposable> traffigLightsDisposables;
+    private List<Disposable> carMover = new ArrayList<>();
     private Set<NodeDto> dtos;
 
     @Autowired
@@ -56,12 +51,12 @@ public class SimulationServiceImpl implements SimulationService {
         setSpawnStreams();
 
         Observable<Long> dataStream =
-                Observable.interval(0,1,TimeUnit.SECONDS)
+                Observable.interval(0, 1, TimeUnit.SECONDS);
                         // .map(i -> System.nanoTime())
-                        .subscribeOn(Schedulers.computation());
-        dataStream.subscribe(v -> {
+                        //.subscribeOn(Schedulers.computation());
+        carMover.add(dataStream.subscribe(v -> {
             CarHolder.getAllCars().forEach(Car::move);
-        });
+        }));
 
         return dataStream;
     }
@@ -69,24 +64,23 @@ public class SimulationServiceImpl implements SimulationService {
     @Override
     public void changeSimulationInfo(final SimulationInfo simulationInfo) {
         this.simulationInfo = simulationInfo;
-       // setSpawnStreams();
+        // setSpawnStreams();
     }
 
     private void setSpawnStreams() {
-//        Function<Map.Entry<SpawnStreamId, Integer>, Observable<Long>> mapToObesrvable;
-//        mapToObesrvable = entry -> Observable.interval(4,
-//                TimeUnit.SECONDS);
-//        // mały potworek XD aby  tworzyc samochód, i dodawać go do holdera
-//        if (spawnDisposables != null) spawnDisposables.forEach(Disposable::dispose);
-//        this.spawnDisposables = simulationInfo.getStreamProduction().entrySet()
-//                .stream()
-//                .collect(Collectors.toMap(Map.Entry::getKey, mapToObesrvable))
-//                .entrySet()
-//                .stream()
-//                .map(entry -> entry.getValue().subscribe(aLong -> spawnCars(entry.getKey())))
-//                .collect(Collectors.toList());
+        Function<Map.Entry<SpawnStreamId, Integer>, Observable<Long>> mapToObesrvable;
+        mapToObesrvable = entry -> Observable.interval(3, TimeUnit.SECONDS);
+        // mały potworek XD aby  tworzyc samochód, i dodawać go do holdera
+        if (spawnDisposables != null) spawnDisposables.forEach(Disposable::dispose);
+        this.spawnDisposables = simulationInfo.getStreamProduction().entrySet()
+                .stream()
+                .collect(Collectors.toMap(Map.Entry::getKey, mapToObesrvable))
+                .entrySet()
+                .stream()
+                .map(entry -> entry.getValue().subscribe(aLong -> spawnCars(entry.getKey())))
+                .collect(Collectors.toList());
 
-            spawnCars(simulationInfo.getStreamProduction().keySet().stream().findFirst().get());
+//            spawnCars(simulationInfo.getStreamProduction().keySet().stream().findFirst().get());
 
 
     }
@@ -97,10 +91,12 @@ public class SimulationServiceImpl implements SimulationService {
 
         isSimulating = false;
         spawnDisposables.forEach(Disposable::dispose);
+        carMover.forEach(Disposable::dispose);
+        carMover.clear();
     }
 
     @Override
-    public void init(){
+    public void init() {
         //clearCache();
         getNodes();
     }
@@ -117,7 +113,7 @@ public class SimulationServiceImpl implements SimulationService {
     }
 
 
-    private  synchronized void spawnCars(final SpawnStreamId id) {
+    private synchronized void spawnCars(final SpawnStreamId id) {
         val car = SpawnNodeHolder.spawnCar(id);
         CarHolder.addCar(car);
     }
@@ -131,10 +127,10 @@ public class SimulationServiceImpl implements SimulationService {
     }
 
     @Override
-    public Map<String, Pair<NodePosition,Integer>> headAndSizes() {
+    public Map<String, Pair<NodePosition, Integer>> headAndSizes() {
 
-        return CarHolder.getAllCars().collect(Collectors.toMap(e-> e.getId().getId(), e-> Pair.of(e
-        .getHead().getPosition(),e.getSize())));
+        return CarHolder.getAllCars().filter(car -> car.getHead()!=null).collect(Collectors.toMap(e -> e.getId().getId(), e -> Pair.of(e
+                .getHead().getPosition(), e.getSize())));
     }
 
     @Override
@@ -148,24 +144,24 @@ public class SimulationServiceImpl implements SimulationService {
         Set<NodePosition> nodePositionSet = new HashSet<>();
         int size = car.getSize();
         Node node = car.getHead();
-        if(node!= null){
-        for (int i = 0; i < size; i++) {
-            if (node!=null) {
-                nodePositionSet.add(node.getPosition());
-                node = node.getNeighbors().getLeft();
+        if (node != null) {
+            for (int i = 0; i < size; i++) {
+                if (node != null) {
+                    nodePositionSet.add(node.getPosition());
+                    node = node.getNeighbors().getLeft();
+                }
             }
-        }
-        val horizontal = nodePositionSet.stream()
-                .mapToDouble(NodePosition::getHoriziontalPosition)
-                .average()
-                .getAsDouble();
-        val vertical = nodePositionSet.stream()
-                .mapToDouble(NodePosition::getVerticalPosition)
-                .average()
-                .getAsDouble();
+            val horizontal = nodePositionSet.stream()
+                    .mapToDouble(NodePosition::getHoriziontalPosition)
+                    .average()
+                    .getAsDouble();
+            val vertical = nodePositionSet.stream()
+                    .mapToDouble(NodePosition::getVerticalPosition)
+                    .average()
+                    .getAsDouble();
             return NodePosition.of(horizontal, vertical);
         }
-        return NodePosition.of(0.0,0.0);
+        return NodePosition.of(0.0, 0.0);
 
 
     }

@@ -1,11 +1,14 @@
 package sample.service
 
 import io.reactivex.Observable
+import io.reactivex.Single
+import okhttp3.HttpUrl
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.jackson.JacksonConverterFactory
 import retrofit2.http.*
+import sample.dto.ChangeSimulationDetailsRequest
 import sample.dto.GetSavedBoardResponse
 import sample.dto.SaveBoardRequest
 
@@ -21,6 +24,13 @@ interface ApiService {
 
     @GET(value = "{name}")
     fun openSimulation(@Path("name") name: String) :Observable<GetSavedBoardResponse>
+
+
+    @POST(value = "details")
+    fun saveDetails(@Body request: ChangeSimulationDetailsRequest) : Single<Void>
+
+    @GET(value = "stop")
+    fun stopSimulation():Single<Void>
 
     companion object {
         fun create(): ApiService {

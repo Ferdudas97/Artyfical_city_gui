@@ -26,6 +26,9 @@ public class Main extends Application {
         Arrays.stream("5 ".split(" ")).mapToInt(Integer::valueOf).max().getAsInt();
      //   primaryStage.set
         primaryStage.show();
+        primaryStage.setMaximized(true);
+        primaryStage.setTitle("Artyficial City");
+
     }
 
 

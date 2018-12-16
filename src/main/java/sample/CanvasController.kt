@@ -117,6 +117,10 @@ class CanvasController {
         stage.initModality(Modality.WINDOW_MODAL)
         stage.scene = Scene(root1)
         stage.show()
+        stage.setMaximized(true)
+        stage.setTitle("Artyficial City")
+
+
     }
 
 

@@ -18,16 +18,16 @@
         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <VBox spacing="20">
+        <VBox spacing="20" style="-fx-background-color: #99ffe6;">
             <children>
             <VBox fx:id="slidersVBox" prefHeight="200" prefWidth="100.0" />
-                <Button fx:id="simulationButton" mnemonicParsing="false" onMouseClicked="#startSimulaton" prefHeight="26.0" prefWidth="85.0" text="Start Simulation" />
-                <Button mnemonicParsing="false" onMouseClicked="#upload" text="Upload" />
+                <Button fx:id="simulationButton" mnemonicParsing="false" onMouseClicked="#startSimulaton" prefHeight="26.0" prefWidth="102.0" text="Start Simulation" />
+                <Button mnemonicParsing="false" onMouseClicked="#upload" prefHeight="25.0" prefWidth="101.0" text="Upload" />
                 <ChoiceBox fx:id="boardNames" onMouseClicked="#updateBoardNames" prefWidth="150.0" />
 
             </children>
         </VBox>
-        <AnchorPane fx:id="anchor" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
+        <AnchorPane fx:id="anchor" style="-fx-background-color: #ffffcc;" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
             <children>
                 <Canvas fx:id="simulationMap" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </children>

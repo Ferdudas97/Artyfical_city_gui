@@ -1,4 +1,4 @@
-package sample.dto;
+package sample.model.node;
 
 
 public enum NodeType {

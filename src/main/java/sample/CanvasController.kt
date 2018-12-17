@@ -19,7 +19,8 @@ import java.lang.RuntimeException
 import java.util.*
 import javafx.stage.Modality
 import javafx.stage.Stage
-
+import sample.model.node.NodeDirection
+import sample.model.node.NodeType
 
 
 class CanvasController {
@@ -29,10 +30,13 @@ class CanvasController {
     lateinit var typeGroup: ToggleGroup
     lateinit var boardNames: ChoiceBox<String>
     lateinit var nameInput: TextField
+    lateinit var sppedInput: TextField
+
     var isDrawing = false
     val retrofit = ApiService.create()
-    val nodeSize = 25.0
+    val nodeSize = 18.0
     lateinit var canvasService: CanvasService
+    var nodeId = 1;
     val nodeService: NodeService = NodeService(nodeSize)
 
 
@@ -46,6 +50,7 @@ class CanvasController {
     fun initialize() {
         updateNames()
         canvasService = CanvasService(simulationMap.graphicsContext2D, nodeSize)
+        sppedInput.setText("50")
     }
 
     fun drawNode(mouseEvent: MouseEvent) {
@@ -58,15 +63,19 @@ class CanvasController {
             val nodeType = getNodeType(selectedRadioType.text)
             val horizontalPosition = computeCoord(mouseEvent.x)
             val verticalPosition = computeCoord(mouseEvent.y)
+            val sppedAllowed = java.lang.Double.parseDouble(sppedInput.text)
             canvasService.drawNode(nodeType, nodeDirection, horizontalPosition, verticalPosition)
             val node = NodeDto.builder()
                     .horizontalPosition(horizontalPosition)
                     .verticalPosition(verticalPosition)
                     .direction(nodeDirection)
                     .nodeType(nodeType)
-                    .nodeId(UUID.randomUUID().toString())
+                    .nodeId(nodeId++.toString())
+                    .maxSpeedAllowed(sppedAllowed)
                     .build()
             nodeService.addNode(node)
+
+
         }
 
     }
@@ -108,6 +117,10 @@ class CanvasController {
         stage.initModality(Modality.WINDOW_MODAL)
         stage.scene = Scene(root1)
         stage.show()
+        stage.setMaximized(true)
+        stage.setTitle("Artyficial City")
+
+
     }
 
 
@@ -127,7 +140,7 @@ class CanvasController {
         "Left" -> NodeDirection.LEFT
         "Right" -> NodeDirection.RIGHT
         "Top" -> NodeDirection.UP
-        "Down" -> NodeDirection.DOWN
+        "Bottom" -> NodeDirection.DOWN
         else -> throw RuntimeException()
     }
 

@@ -71,6 +71,9 @@ class SimulationController {
         value.text ="${slider.valueProperty().get()} x"
         slider.valueProperty().addListener { observable, oldValue, newValue ->
             value.text = "${newValue.toInt()} x"
+            updateSimulation()
+
+
         }
         vBox.children.addAll(title, value, slider)
         slidersVBox.children.add(vBox)
@@ -89,14 +92,28 @@ class SimulationController {
         title.labelFor = value
         slider.valueProperty().addListener { observable, oldValue, newValue ->
             value.text = "${newValue.toInt()} car/min"
+            updateSimulation()
+
         }
         vBox.children.addAll(title, value, slider)
         slidersVBox.children.add(vBox)
         sliders[sliderId] = slider
     }
 
+    fun updateSimulation(){
+        if(simulationButton.text == "Stop simulation"){
+            simulationService.stopSimulation()
+            simulationService.startSimulation()
+        }
+    }
+
 
     fun upload(mouseEvent: MouseEvent) {
+        slidersVBox.children.clear()
+        if (simulationButton.text =="Stop simulation"){
+            simulationButton.text ="Start simulation"
+            simulationService.stopSimulation()
+        }
         prepareBoard()
         nodeService.deleteNodes()
         retrofit.uploadBoard(boardNames.value)

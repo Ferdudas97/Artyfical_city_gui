@@ -23,7 +23,7 @@
             <VBox fx:id="slidersVBox" prefHeight="200" prefWidth="100.0" />
                 <Button fx:id="simulationButton" mnemonicParsing="false" onMouseClicked="#startSimulaton" prefHeight="26.0" prefWidth="85.0" text="Start Simulation" />
                 <Button mnemonicParsing="false" onMouseClicked="#upload" text="Upload" />
-                <ChoiceBox fx:id="boardNames" onMouseClicked="#updateBoardNames" prefWidth="150.0" />
+                <ChoiceBox fx:id="boardNames" prefWidth="150.0" />
 
             </children>
         </VBox>

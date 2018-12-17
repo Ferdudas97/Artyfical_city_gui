@@ -1,13 +1,17 @@
 package sample.model.car;
 
 
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.val;
+import lombok.var;
+import sample.model.node.Neighbors;
 import sample.model.node.Node;
 
 import java.util.*;
 import java.util.function.Function;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -20,11 +24,9 @@ public class Car {
     private int size;
     private CarId id;
     private final Function<Double, Double> accelerationFunction;
-    private static Integer idIterator = 0;
 
     public Car(final Node head, final int size, final Double maxSpeed) {
-        this.id = CarId.of(idIterator.toString());
-        idIterator++;
+        this.id = CarId.of(UUID.randomUUID().toString());
         this.accelerationFunction = speed -> 0.5;
         this.head = head;
         this.size = size;
@@ -35,7 +37,6 @@ public class Car {
     public synchronized void move() {
         if (head != null) {
             val previousHead = head;
-            System.out.println(" id = " + id.getId() + "x =" + head.getPosition().getHoriziontalPosition() + " y= " + head.getPosition().getVerticalPosition());
             int distance = currentSpeed.intValue();
             boolean shouldChange = isStripEndingSoon(head, distance);
             if (shouldChange) changeStrip();
@@ -44,9 +45,10 @@ public class Car {
             }
             currentSpeed = getMaximumPossibleSpeedOnStrip(head);
             removePresenceFromPreviousNodes(previousHead);
-            moveNodes();
-        } else {
-            CarHolder.removeCar(this);
+            if (isEndOfMap(head)) CarHolder.removeCar(this);
+            else {
+                moveNodes();
+            }
         }
 
     }
@@ -63,12 +65,13 @@ public class Car {
     private synchronized void changeStrip() {
         Node newHead = getTheNodeWithTheLongestDistance();
         boolean isChanging = randomDecisionAboutChangingStrip(newHead);
-        if (isChanging && newHead!=null) head = newHead;
+        if (isChanging && newHead!=null && checkIfIsEnoughSpace(newHead)) head = newHead;
     }
 
     private synchronized void changeToTheFastestPossible() {
         Node nodeWithTheHigherPossibleSpeed = getStripWithMaximumPossibleSpeed();
-        if (nodeWithTheHigherPossibleSpeed != null && head != nodeWithTheHigherPossibleSpeed && randomDecisionAboutChangingStrip(nodeWithTheHigherPossibleSpeed))
+        if (nodeWithTheHigherPossibleSpeed != null && checkIfIsEnoughSpace(nodeWithTheHigherPossibleSpeed) &&
+                head != nodeWithTheHigherPossibleSpeed && randomDecisionAboutChangingStrip(nodeWithTheHigherPossibleSpeed))
             head = nodeWithTheHigherPossibleSpeed;
 
     }
@@ -190,12 +193,36 @@ public class Car {
         return dist;
     }
 
+    private boolean checkIfIsEnoughSpace(Node node) {
+        for(int i = 0; i <size ; i++) {
+            if (node!= null) {
+                node = node.getNeighbors().getLeft();
+            }
+            else return false;
+        }
+        return true;
+
+    }
+
     private Double acceleratedSpeed() {
         return Math.min(maxSpeed, currentSpeed + accelerationFunction.apply(currentSpeed));
     }
 
     private Double brakeSpeed(int dist) {
         return Math.max(Math.min(currentSpeed, dist - 1),0);
+    }
+
+    private boolean isEndOfMap(Node node) {
+        var bottomNode = node.getNeighbors().getBottom();
+        while (node!= null) {
+            if (node.getNeighbors().getRight() != null) return false;
+            node = node.getNeighbors().getTop();
+        }
+        while (bottomNode!= null) {
+            if (bottomNode.getNeighbors().getRight() != null) return false;
+            bottomNode = bottomNode.getNeighbors().getBottom();
+        }
+        return true;
     }
 
 }

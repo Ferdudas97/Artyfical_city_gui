@@ -20,7 +20,7 @@ class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
     private fun getImage(nodeDirection: NodeDirection, nodeType: NodeType) = when (nodeType) {
         NodeType.ROAD -> getRoadImage(nodeDirection)
         NodeType.SPAWN -> Image("sample/img/road_spawn.png", nodeSize, nodeSize, true, true)
-        NodeType.CONNECTOR -> Image("sample/img/road_connect.png", nodeSize, nodeSize, true, true)
+        NodeType.CONNECTOR -> Image("sample/img/road_connector.png", nodeSize, nodeSize, true, true)
 
     }
 

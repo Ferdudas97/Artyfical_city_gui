@@ -67,41 +67,41 @@ public class NodeMapper {
     }
 
 
-    private static void setNeighboursWithLeftDirection(final NodeDto entity, final Map<String, Node> map) {
-        map.get(entity.getNodeId())
+    private static void setNeighboursWithLeftDirection(final NodeDto nodeDto, final Map<String, Node> map) {
+        map.get(nodeDto.getNodeId())
                 .setNeighbors(Neighbors.of(
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getBottomId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getRightId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getLeftId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getTopId())));
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getBottomId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getRightId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getLeftId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getTopId())));
     }
 
-    private static void setNeighboursWithRightDirection(final NodeDto entity, final Map<String, Node> map) {
-        map.get(entity.getNodeId())
+    private static void setNeighboursWithRightDirection(final NodeDto nodeDto, final Map<String, Node> map) {
+        map.get(nodeDto.getNodeId())
                 .setNeighbors(Neighbors.of(
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getTopId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getLeftId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getRightId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getBottomId())));
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getTopId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getLeftId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getRightId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getBottomId())));
     }
 
-    private static void setNeighboursWithTopDirection(final NodeDto entity, final Map<String, Node> map) {
-        map.get(entity.getNodeId())
+    private static void setNeighboursWithTopDirection(final NodeDto nodeDto, final Map<String, Node> map) {
+        map.get(nodeDto.getNodeId())
                 .setNeighbors(Neighbors.of(
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getLeftId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getBottomId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getTopId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getRightId())));
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getLeftId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getTopId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getBottomId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getRightId())));
     }
 
 
-    private static void setNeighboursWithDownDirection(final NodeDto entity, final Map<String, Node> map) {
-        map.get(entity.getNodeId())
+    private static void setNeighboursWithDownDirection(final NodeDto nodeDto, final Map<String, Node> map) {
+        map.get(nodeDto.getNodeId())
                 .setNeighbors(Neighbors.of(
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getRightId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getTopId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getBottomId()),
-                        getNodeWithTheSameDirection(map, entity.getDirection(), entity.getLeftId())));
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getRightId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getBottomId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getTopId()),
+                        getNodeWithTheSameDirection(map, nodeDto.getDirection(), nodeDto.getLeftId())));
     }
 
     private static Node getNodeWithTheSameDirection(final Map<String, Node> map,
@@ -109,7 +109,7 @@ public class NodeMapper {
                                                     final String nodeId) {
         val node = map.get(nodeId);
         if (node == null) return null;
-        return direction.equals(node.getDirection()) ? node : null;
+        return NodeDirection.isOpposite(direction, node.getDirection()) ? null : node;
 
     }
 }

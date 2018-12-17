@@ -3,6 +3,7 @@ package sample.service;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
+import io.reactivex.Scheduler;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.observables.ConnectableObservable;
 import io.reactivex.schedulers.Schedulers;
@@ -39,7 +40,7 @@ public class SimulationServiceImpl implements SimulationService {
     private List<Disposable> traffigLightsDisposables;
     private List<Disposable> carMover = new ArrayList<>();
     private Set<NodeDto> dtos;
-
+    private Boolean stopped;
     @Autowired
     public SimulationServiceImpl(Set<NodeDto> boardDao) {
         this.dtos = boardDao;
@@ -47,13 +48,11 @@ public class SimulationServiceImpl implements SimulationService {
 
     @Override
     public Observable<Long> startSimulation() {
-        isSimulating = true;
+        isSimulating = !isSimulating;
         setSpawnStreams();
 
         Observable<Long> dataStream =
-                Observable.interval(0, 1, TimeUnit.SECONDS);
-                        // .map(i -> System.nanoTime())
-                        //.subscribeOn(Schedulers.computation());
+                Observable.interval(0, 1*1000/simulationInfo.getSimulationSpeed(), TimeUnit.MILLISECONDS).subscribeOn(Schedulers.computation());
         carMover.add(dataStream.subscribe(v -> {
             CarHolder.getAllCars().forEach(Car::move);
         }));
@@ -69,7 +68,7 @@ public class SimulationServiceImpl implements SimulationService {
 
     private void setSpawnStreams() {
         Function<Map.Entry<SpawnStreamId, Integer>, Observable<Long>> mapToObesrvable;
-        mapToObesrvable = entry -> Observable.interval(3, TimeUnit.SECONDS);
+        mapToObesrvable = entry -> Observable.interval(0,1000*60/entry.getValue()/simulationInfo.getSimulationSpeed(), TimeUnit.MILLISECONDS).subscribeOn(Schedulers.computation());
         // mały potworek XD aby  tworzyc samochód, i dodawać go do holdera
         if (spawnDisposables != null) spawnDisposables.forEach(Disposable::dispose);
         this.spawnDisposables = simulationInfo.getStreamProduction().entrySet()
@@ -89,8 +88,9 @@ public class SimulationServiceImpl implements SimulationService {
     @Override
     public void stopSimulation() {
 
-        isSimulating = false;
+        isSimulating = !isSimulating;
         spawnDisposables.forEach(Disposable::dispose);
+        spawnDisposables.clear();
         carMover.forEach(Disposable::dispose);
         carMover.clear();
     }

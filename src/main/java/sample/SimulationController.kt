@@ -4,6 +4,7 @@ import com.launchdarkly.eventsource.EventSource
 import io.reactivex.Observable
 import io.reactivex.Scheduler
 import javafx.application.Platform
+import javafx.concurrent.Task
 import javafx.event.Event
 import javafx.geometry.Orientation
 import javafx.scene.canvas.Canvas
@@ -40,19 +41,16 @@ class SimulationController {
     lateinit var simulationButton: Button
     fun initialize() {
         canvasService = CanvasService(simulationMap.graphicsContext2D, nodeSize)
-    }
-
-    fun updateBoardNames(event: Event) {
         retrofit.getAllNames().forEach { list ->
             boardNames.itemsProperty().get().setAll(list)
 
         }
     }
 
-    fun getSpawnStreams() {
+    private fun getSpawnStreams() {
         var i = 0
         nodeService.getAllNodes()
-                .parallelStream()
+                .stream()
                 .filter { node -> node.nodeType == NodeType.SPAWN }
                 .map(NodeDto::getSpawnStreamId)
                 .distinct()
@@ -65,11 +63,12 @@ class SimulationController {
         val vBox = VBox()
         val value = Label()
         val title = Label("Simulation speed: ")
-        val slider = Slider(0.0, 20.0, 1.0)
+        val slider = Slider(0.0, 5.0, 1.0)
         vBox.spacing = 5.0
         slider.orientation = Orientation.HORIZONTAL
         value.labelFor = slider
         title.labelFor = value
+        value.text ="${slider.valueProperty().get()} x"
         slider.valueProperty().addListener { observable, oldValue, newValue ->
             value.text = "${newValue.toInt()} x"
         }
@@ -82,10 +81,11 @@ class SimulationController {
         val vBox = VBox()
         val value = Label()
         val title = Label("Stream: $it")
-        val slider = Slider(0.0, 500.0, 250.0)
+        val slider = Slider(0.0, 200.0, 10.0)
         vBox.spacing = 5.0
         slider.orientation = Orientation.HORIZONTAL
         value.labelFor = slider
+        value.text ="${slider.valueProperty().get()} car/min"
         title.labelFor = value
         slider.valueProperty().addListener { observable, oldValue, newValue ->
             value.text = "${newValue.toInt()} car/min"
@@ -109,19 +109,20 @@ class SimulationController {
                     }
                 }
         getSpawnStreams()
-        getSimulationData()
         simulationService = SimulationServiceImpl(nodeService.getAllNodes())
         simulationService.init()
     }
 
     fun startSimulaton(mouseEvent: MouseEvent) {
         if (!simulationService.isSimulating) {
+
             simulationService.changeSimulationInfo(prepareSimulationDetails())
             simulationService.startSimulation().subscribe {
                 nodeService.getAllNodes().forEach { node ->
                     canvasService.drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
 
                 }
+
                 simulationService.headAndSizes().forEach { e ->
                     canvasService.drawCar(e.key,
                             e.value.second, nodeService.getNode(e.value.first.horiziontalPosition,e.value.first.verticalPosition)!! )
@@ -137,10 +138,7 @@ class SimulationController {
         }
     }
 
-    fun getSimulationData() {
-        // CarHolder.getAllCars().forEach {canvasService.drawCar(i) }
 
-    }
 
     private fun prepareSimulationDetails(): SimulationInfo {
         val streams = sliders.filter { it.key != "SPEED" }.entries.associate { SpawnStreamId.of(it.key) to it.value.value.toInt() }
@@ -152,7 +150,6 @@ class SimulationController {
         simulationMap.width = anchor.width;
         simulationMap.height = anchor.height;
         canvasService.drawGrass(simulationMap.width, simulationMap.height)
-        canvasService.drawGrid(simulationMap.width, simulationMap.height)
     }
 
 

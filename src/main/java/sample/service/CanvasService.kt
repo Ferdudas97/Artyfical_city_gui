@@ -42,16 +42,14 @@ class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
 
     fun drawCarInSpecifiedDirection(x: Double, y: Double, direction: NodeDirection, delta: Pair<Double, Double>) = when (direction) {
         NodeDirection.LEFT -> gc.fillRect(x, y, delta.first, delta.second)
-        NodeDirection.RIGHT -> gc.fillRect(x - nodeSize, y, delta.first, delta.second)
+        NodeDirection.RIGHT -> gc.fillRect(x - nodeSize , y, delta.first, delta.second)
         NodeDirection.UP -> gc.fillRect(x, y, delta.first, delta.second)
         NodeDirection.DOWN -> gc.fillRect(x , y-nodeSize, delta.first, delta.second)
-
-
     }
 
-    fun carDeltaInSpecifiedDirection(nodeDirection: NodeDirection, size: Int) = when (nodeDirection) {
-        NodeDirection.DOWN, NodeDirection.UP -> (nodeSize) to (nodeSize) * size
-        NodeDirection.LEFT, NodeDirection.RIGHT -> (nodeSize) * size to (nodeSize)
+   private fun carDeltaInSpecifiedDirection(nodeDirection: NodeDirection, size: Int) = when (nodeDirection) {
+        NodeDirection.DOWN, NodeDirection.UP -> (nodeSize/1.3) to (nodeSize/1.3) * size
+        NodeDirection.LEFT, NodeDirection.RIGHT -> (nodeSize/1.3) * size to (nodeSize/1.3)
     }
 
 

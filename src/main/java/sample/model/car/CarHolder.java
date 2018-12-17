@@ -13,9 +13,7 @@ public class CarHolder {
     public static final Map<CarId,Car> cars= new ConcurrentHashMap<>();
 
     public static void addCar(final Car car) {
-        System.out.println("Tu jesemmmmmmmmm");
-        System.out.println(car.getId().toString());
-        cars.put(car.getId(), car);
+        if (car!=null && car.getId()!= null) cars.put(car.getId(), car);
     }
 
     public static void removeCar(final Car car) {

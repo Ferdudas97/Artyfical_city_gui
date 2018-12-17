@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d2643da0-afb9-4d40-9268-d8d3ec3b38fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/SimulationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/SimulationController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/node/NodeDirection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/NodeDirection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/NodeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/NodeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/TestHandler.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/simulationBoard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/simulationBoard.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-245">
-              <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
+            <state relative-caret-position="-60">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -118,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/SimulationController.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
-              <caret line="119" column="59" selection-start-line="119" selection-start-column="58" selection-end-line="119" selection-end-column="59" />
+              <caret line="136" column="59" selection-start-line="136" selection-start-column="58" selection-end-line="136" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -488,7 +480,7 @@
       <workItem from="1544925494468" duration="5742000" />
       <workItem from="1544955588141" duration="12629000" />
       <workItem from="1544974567261" duration="25668000" />
-      <workItem from="1545061570526" duration="8990000" />
+      <workItem from="1545061570526" duration="10020000" />
     </task>
     <task id="LOCAL-00001" summary="simulationController">
       <created>1544897639506</created>
@@ -553,11 +545,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544990293342</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="car can turn">
+      <created>1545070950927</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1545070950927</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72978000" />
+    <option name="totallyTimeSpent" value="74008000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -692,7 +691,8 @@
     <MESSAGE value="one car is moving now" />
     <MESSAGE value="algorithm improved" />
     <MESSAGE value="algorithm is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="algorithm is working" />
+    <MESSAGE value="car can turn" />
+    <option name="LAST_COMMIT_MESSAGE" value="car can turn" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -711,7 +711,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt</url>
-          <line>22</line>
+          <line>24</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
@@ -1096,7 +1096,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/SimulationController.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
-          <caret line="119" column="59" selection-start-line="119" selection-start-column="58" selection-end-line="119" selection-end-column="59" />
+          <caret line="136" column="59" selection-start-line="136" selection-start-column="58" selection-end-line="136" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -1109,8 +1109,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="61" />
+        <state relative-caret-position="-60">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
         </state>
       </provider>
     </entry>

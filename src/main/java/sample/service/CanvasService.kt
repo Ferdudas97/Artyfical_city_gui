@@ -12,6 +12,8 @@ import kotlin.random.Random
 class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
 
     val carMap = HashMap<String, Color>()
+
+    @Synchronized
     fun drawNode(type: NodeType, direction: NodeDirection, x: Double, y: Double) {
         val image = getImage(direction, type)
         gc.drawImage(image, x, y)
@@ -32,6 +34,7 @@ class CanvasService(val gc: GraphicsContext, val nodeSize: Double) {
     }
 
 
+    @Synchronized
     fun drawCar(id: String, size: Int, head: NodeDto) {
         carMap.putIfAbsent(id, pickRandomColor())
         gc.fill = carMap[id]

@@ -44,8 +44,6 @@ public class NodeMapper {
         return new HashSet<>(mapWithNodes.values());
     }
 
-
-
     private static Node toTrafficLightNode(NodeDto dto) {
 
         return TrafficLightsNode.builder()

@@ -150,7 +150,8 @@ class CanvasController {
         retrofit.uploadBoard(boardNames.value)
                 .map { response -> response.boardDto.nodeDtos }
                 .forEach { nodes ->
-                    nodes.stream().peek { node ->
+                    nodes.stream()
+                            .peek { node ->
                         nodeService.addNode(node)
                         canvasService.drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
                     }

@@ -7,8 +7,8 @@ import sample.model.node.NodeDirection
 
 
 fun setNext(node: NodeDto, nextNodeDto: NodeDto?) = when(node.direction) {
-    NodeDirection.UP ->if (node.topId == null) node.bottomId = nextNodeDto?.nodeId else{}
-    NodeDirection.DOWN ->if (node.bottomId == null) node.topId = nextNodeDto?.nodeId else{}
+    NodeDirection.UP ->if (node.bottomId == null) node.bottomId = nextNodeDto?.nodeId else{}
+    NodeDirection.DOWN ->if (node.topId == null) node.topId = nextNodeDto?.nodeId else{}
     NodeDirection.LEFT -> if (node.leftId == null) node.leftId = nextNodeDto?.nodeId else{}
     NodeDirection.RIGHT -> if (node.rightId == null) node.rightId = nextNodeDto?.nodeId else{}
 
@@ -36,7 +36,7 @@ private fun setNeighboursToNodeWithRightDirection(node: NodeDto, connectorHelper
 
 private fun setNeighboursToNodeWithUpDirection(node: NodeDto, connectorHelper: ConnectorHelper) {
     node.rightId = connectorHelper.secondId
-    node.topId = connectorHelper.firstId
+    node.bottomId = connectorHelper.firstId
     node.leftId = connectorHelper.thirdId
 }
 
@@ -44,7 +44,7 @@ private fun setNeighboursToNodeWithUpDirection(node: NodeDto, connectorHelper: C
 private fun setNeighboursToNodeWithDownDirection(node: NodeDto, connectorHelper: ConnectorHelper) {
     node.rightId = connectorHelper.secondId
     node.leftId = connectorHelper.thirdId
-    node.bottomId = connectorHelper.firstId
+    node.topId = connectorHelper.firstId
 }
 
 

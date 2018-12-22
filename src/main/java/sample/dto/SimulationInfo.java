@@ -1,4 +1,4 @@
-package sample.service;
+package sample.dto;
 
 import sample.model.node.spawn.SpawnStreamId;
 

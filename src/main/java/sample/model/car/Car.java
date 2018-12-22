@@ -98,13 +98,6 @@ public class Car {
         }
     }
 
-    public static void main(String[] args) {
-        Double x = 5.9;
-        for (int i = 0; i <x.intValue(); i++) {
-            System.out.println(i);
-        }
-        System.out.println(x.intValue());
-    }
     private boolean isStripEndingSoon(Node node, int speed) {
         int distance = 0;
         if (speed==0) return true;
@@ -194,8 +187,9 @@ public class Car {
     }
 
     private boolean checkIfIsEnoughSpace(Node node) {
-        for(int i = 0; i <size ; i++) {
+        for(int i = 0; i <size+1 ; i++) {
             if (node!= null) {
+                if (node.getIsTaken()) return false;
                 node = node.getNeighbors().getLeft();
             }
             else return false;
@@ -205,8 +199,11 @@ public class Car {
     }
 
     private Double acceleratedSpeed() {
-        return Math.min(maxSpeed, currentSpeed + accelerationFunction.apply(currentSpeed));
+        return Stream.of(maxSpeed, currentSpeed + accelerationFunction.apply(currentSpeed),head.getMaxSpeedAllowed())
+                .min(Double::compareTo)
+                .get();
     }
+
 
     private Double brakeSpeed(int dist) {
         return Math.max(Math.min(currentSpeed, dist - 1),0);

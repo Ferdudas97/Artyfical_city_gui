@@ -1,8 +1,9 @@
-package sample.service;
+package sample.infastructure;
 
 import lombok.val;
 import sample.dto.NodeDto;
 import sample.model.node.*;
+import sample.model.node.lights.TrafficLightsNode;
 import sample.model.node.spawn.SpawnStreamId;
 
 import java.util.*;
@@ -18,11 +19,12 @@ public class NodeMapper {
     }
 
     private static Map<NodeDirection, NeighboursSetter> neighboursSetterMap;
-
     static {
         specifiedMappers = new HashMap<>();
         specifiedMappers.putIfAbsent(NodeType.ROAD, NodeMapper::toRoadNode);
         specifiedMappers.putIfAbsent(NodeType.SPAWN, NodeMapper::toSpawnNode);
+        specifiedMappers.putIfAbsent(NodeType.LIGHTS, NodeMapper::toTrafficLightNode);
+        specifiedMappers.putIfAbsent(NodeType.CONNECTOR, NodeMapper::toRoadNode);
 
         neighboursSetterMap = new HashMap<>();
         neighboursSetterMap.put(NodeDirection.LEFT, NodeMapper::setNeighboursWithLeftDirection);
@@ -30,6 +32,7 @@ public class NodeMapper {
         neighboursSetterMap.put(NodeDirection.UP, NodeMapper::setNeighboursWithTopDirection);
         neighboursSetterMap.put(NodeDirection.DOWN, NodeMapper::setNeighboursWithDownDirection);
     }
+
 
 
     public static Set<Node> toDomain(final Set<NodeDto> nodeDtos) {
@@ -42,6 +45,18 @@ public class NodeMapper {
     }
 
 
+
+    private static Node toTrafficLightNode(NodeDto dto) {
+
+        return TrafficLightsNode.builder()
+                .id(NodeId.of(dto.getNodeId()))
+                .type(dto.getNodeType())
+                .maxSpeedAllowed(dto.getMaxSpeedAllowed())
+                .direction(dto.getDirection())
+                .isTaken(true)
+                .position(NodePosition.of(dto.getHorizontalPosition(), dto.getVerticalPosition()))
+                .build();
+    }
 
 
 

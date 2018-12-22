@@ -1,11 +1,5 @@
-package sample
+package sample.controller
 
-import com.launchdarkly.eventsource.EventSource
-import io.reactivex.Observable
-import io.reactivex.Scheduler
-import javafx.application.Platform
-import javafx.concurrent.Task
-import javafx.event.Event
 import javafx.geometry.Orientation
 import javafx.scene.canvas.Canvas
 import javafx.scene.control.Button
@@ -15,30 +9,28 @@ import javafx.scene.control.Slider
 import javafx.scene.input.MouseEvent
 import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
-import sample.dto.ChangeSimulationDetailsRequest
 import sample.dto.NodeDto
-import sample.model.car.CarHolder
+import sample.dto.SimulationInfo
+import sample.model.node.NodeId
 import sample.model.node.NodeType
-import sample.model.node.spawn.SpawnStream
 import sample.model.node.spawn.SpawnStreamId
 import sample.service.*
-import java.net.URI
-import java.util.*
-import java.util.concurrent.TimeUnit
 
 
 class SimulationController {
-    private val retrofit = ApiService.create()
     lateinit var boardNames: ChoiceBox<String>
     lateinit var simulationMap: Canvas
     lateinit var anchor: AnchorPane
     lateinit var slidersVBox: VBox
-    val nodeSize = 15.0
-    private val nodeService = NodeService(nodeSize)
-    private val sliders = hashMapOf<String, Slider>()
     lateinit var canvasService: CanvasService
     lateinit var simulationService: SimulationService
     lateinit var simulationButton: Button
+
+    val nodeSize = 15.0
+    private val nodeService = NodeService(nodeSize)
+    private val retrofit = ApiService.create()
+    private val sliders = hashMapOf<String, Slider>()
+
     fun initialize() {
         canvasService = CanvasService(simulationMap.graphicsContext2D, nodeSize)
         retrofit.getAllNames().forEach { list ->
@@ -68,7 +60,7 @@ class SimulationController {
         slider.orientation = Orientation.HORIZONTAL
         value.labelFor = slider
         title.labelFor = value
-        value.text ="${slider.valueProperty().get()} x"
+        value.text = "${slider.valueProperty().get()} x"
         slider.valueProperty().addListener { observable, oldValue, newValue ->
             value.text = "${newValue.toInt()} x"
             updateSimulation()
@@ -88,7 +80,7 @@ class SimulationController {
         vBox.spacing = 5.0
         slider.orientation = Orientation.HORIZONTAL
         value.labelFor = slider
-        value.text ="${slider.valueProperty().get()} car/min"
+        value.text = "${slider.valueProperty().get()} car/min"
         title.labelFor = value
         slider.valueProperty().addListener { observable, oldValue, newValue ->
             value.text = "${newValue.toInt()} car/min"
@@ -100,8 +92,8 @@ class SimulationController {
         sliders[sliderId] = slider
     }
 
-    fun updateSimulation(){
-        if(simulationButton.text == "Stop simulation"){
+    private fun updateSimulation() {
+        if (simulationButton.text == "Stop simulation") {
             simulationService.stopSimulation()
             simulationService.startSimulation()
         }
@@ -110,8 +102,8 @@ class SimulationController {
 
     fun upload(mouseEvent: MouseEvent) {
         slidersVBox.children.clear()
-        if (simulationButton.text =="Stop simulation"){
-            simulationButton.text ="Start simulation"
+        if (simulationButton.text == "Stop simulation") {
+            simulationButton.text = "Start simulation"
             simulationService.stopSimulation()
         }
         prepareBoard()
@@ -135,26 +127,24 @@ class SimulationController {
 
             simulationService.changeSimulationInfo(prepareSimulationDetails())
             simulationService.startSimulation().subscribe {
-                nodeService.getAllNodes().forEach { node ->
+                nodeService.getAllNodes().parallelStream().filter { it.nodeType !== NodeType.LIGHTS }.forEach { node ->
                     canvasService.drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
 
                 }
 
-                simulationService.headAndSizes().forEach { e ->
+                simulationService.headAndSizes().entries.parallelStream().forEach { e ->
                     canvasService.drawCar(e.key,
-                            e.value.second, nodeService.getNode(e.value.first.horiziontalPosition,e.value.first.verticalPosition)!! )
+                            e.value.second, nodeService.getNode(e.value.first.horiziontalPosition, e.value.first.verticalPosition)!!)
 
                 }
-
             }
             simulationButton.text = "Stop simulation"
         } else {
             simulationService.stopSimulation()
-            simulationButton.text ="Start simulation"
+            simulationButton.text = "Start simulation"
 
         }
     }
-
 
 
     private fun prepareSimulationDetails(): SimulationInfo {
@@ -167,6 +157,21 @@ class SimulationController {
         simulationMap.width = anchor.width;
         simulationMap.height = anchor.height;
         canvasService.drawGrass(simulationMap.width, simulationMap.height)
+    }
+
+    private fun computeCoord(x: Double) = Math.floor(x / nodeSize) * nodeSize
+    fun changeTrafficLight(mouseEvent: MouseEvent) {
+
+        val x = computeCoord(mouseEvent.x)
+        val y = computeCoord(mouseEvent.y)
+
+        val nodeId = nodeService.getNode(x, y)?.nodeId
+
+        nodeId?.let {
+            val color = simulationService.changeLight(NodeId.of(it))
+            canvasService.changeLightColor(x, y, color)
+        }
+
     }
 
 

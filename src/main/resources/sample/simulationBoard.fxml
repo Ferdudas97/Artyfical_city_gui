@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane maxWidth="Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SimulationController">
+<GridPane maxWidth="Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.SimulationController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" />
         <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" prefWidth="100.0" />
@@ -29,7 +29,7 @@
         </VBox>
         <AnchorPane fx:id="anchor" style="-fx-background-color: #ffffcc;" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS">
             <children>
-                <Canvas fx:id="simulationMap" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <Canvas fx:id="simulationMap" onMouseClicked="#changeTrafficLight" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
             </children>
         </AnchorPane>
 

@@ -3,10 +3,12 @@ package sample.model.node.spawn;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import sample.model.car.Car;
+import sample.model.car.CarType;
 import sample.model.node.SpawnCarNode;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 @AllArgsConstructor(staticName = "of")
@@ -21,6 +23,7 @@ public class SpawnStream {
                     return collected.stream();
                 }))
                 .limit(1)
+                .peek(node -> node.setIsTaken(true))
                 .map(SpawnCarNode::spawnCar)
                 .findFirst()
                 .orElse(null);

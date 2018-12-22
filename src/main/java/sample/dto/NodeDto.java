@@ -16,7 +16,7 @@ public class NodeDto {
     private Double horizontalPosition;
     private String nodeId;
 
-    @java.beans.ConstructorProperties({"nodeType", "direction", "leftId", "rightId", "topId", "bottomId", "spawnStreamId", "maxSpeedAllowed", "verticalPosition", "horizontalPosition", "nodeId"})
+    @java.beans.ConstructorProperties({"nodeType", "direction", "leftId", "firstId", "secondId", "thirdId", "spawnStreamId", "maxSpeedAllowed", "verticalPosition", "horizontalPosition", "nodeId"})
     public NodeDto(NodeType nodeType, NodeDirection direction, String leftId, String rightId, String topId, String bottomId, String spawnStreamId, Double maxSpeedAllowed, Double verticalPosition, Double horizontalPosition, String nodeId) {
         this.nodeType = nodeType;
         this.direction = direction;
@@ -202,7 +202,7 @@ public class NodeDto {
         }
 
         public String toString() {
-            return "NodeDto.NodeDtoBuilder(nodeType=" + this.nodeType + ", direction=" + this.direction + ", leftId=" + this.leftId + ", rightId=" + this.rightId + ", topId=" + this.topId + ", bottomId=" + this.bottomId + ", spawnStreamId=" + this.spawnStreamId + ", maxSpeedAllowed=" + this.maxSpeedAllowed + ", verticalPosition=" + this.verticalPosition + ", horizontalPosition=" + this.horizontalPosition + ", nodeId=" + this.nodeId + ")";
+            return "NodeDto.NodeDtoBuilder(nodeType=" + this.nodeType + ", direction=" + this.direction + ", leftId=" + this.leftId + ", firstId=" + this.rightId + ", secondId=" + this.topId + ", thirdId=" + this.bottomId + ", spawnStreamId=" + this.spawnStreamId + ", maxSpeedAllowed=" + this.maxSpeedAllowed + ", verticalPosition=" + this.verticalPosition + ", horizontalPosition=" + this.horizontalPosition + ", nodeId=" + this.nodeId + ")";
         }
     }
 }

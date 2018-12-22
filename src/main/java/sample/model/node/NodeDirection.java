@@ -3,7 +3,7 @@ package sample.model.node;
 public enum NodeDirection {
     LEFT, RIGHT,UP,DOWN;
     public static Boolean isOpposite(NodeDirection direction1, NodeDirection direction2) {
-        return getOppositeDirection(direction1).equals(direction1);
+        return getOppositeDirection(direction1).equals(direction2);
 
     }
 

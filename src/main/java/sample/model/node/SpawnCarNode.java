@@ -17,7 +17,7 @@ public class SpawnCarNode extends Node {
 
     private SpawnStreamId spawnStreamId;
     public Car spawnCar() {
-        return CarFactory.creatorMap.get(CarType.MEDIUM).apply(this);
+        return CarFactory.creatorMap.get(CarType.getRandomedType()).apply(this);
     }
 
     @Builder

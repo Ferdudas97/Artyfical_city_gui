@@ -18,9 +18,9 @@ public class CarFactory {
     //Todo jakie mają miec wartości te samochody
     static {
         creatorMap = new HashMap<>();
-        creatorMap.put(CarType.BIG, node -> new Car(node,4,2.0));
+        creatorMap.put(CarType.BIG, node -> new Car(node,3,2.0));
         creatorMap.put(CarType.MEDIUM, node -> new Car(node,2,3.0));
-        creatorMap.put(CarType.SMALL, node -> new Car(node,1,1.0));
+        creatorMap.put(CarType.SMALL, node -> new Car(node,1,5.0));
 
     }
 }

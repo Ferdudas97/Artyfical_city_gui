@@ -2,5 +2,5 @@ package sample.model.node;
 
 
 public enum NodeType {
-    ROAD,CONNECTOR,SPAWN
+    ROAD,CONNECTOR,SPAWN,LIGHTS
 }

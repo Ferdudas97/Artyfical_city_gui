@@ -2,10 +2,8 @@ package sample.model.node.spawn;
 
 
 import sample.model.car.Car;
-import sample.model.node.SpawnCarNode;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 

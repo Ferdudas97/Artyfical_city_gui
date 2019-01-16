@@ -1,7 +1,6 @@
 package sample.model.common;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 
 @AllArgsConstructor(staticName = "of")
 public class Pair<F,S> {

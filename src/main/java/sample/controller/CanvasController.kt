@@ -9,17 +9,18 @@ import javafx.scene.control.*
 import javafx.scene.input.MouseEvent
 import javafx.scene.layout.AnchorPane
 import javafx.scene.layout.VBox
-import sample.dto.*
-import sample.service.ApiService
-import sample.service.CanvasService
-import sample.service.NodeService
-import java.lang.RuntimeException
 import javafx.stage.Modality
 import javafx.stage.Stage
+import sample.dto.BoardDto
+import sample.dto.NodeDto
+import sample.dto.SaveBoardRequest
 import sample.infastructure.ConnectorHelper
 import sample.infastructure.setNeighboursToConnectorNode
 import sample.model.node.NodeDirection
 import sample.model.node.NodeType
+import sample.service.ApiService
+import sample.service.CanvasService
+import sample.service.NodeService
 
 
 class CanvasController {
@@ -88,7 +89,6 @@ class CanvasController {
     fun clearBoard(mouseEvent: MouseEvent) {
         prepareBoard()
         nodeService.clearNodes()
-
     }
 
     fun initialize() {

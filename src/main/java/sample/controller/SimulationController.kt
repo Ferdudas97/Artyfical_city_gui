@@ -82,7 +82,7 @@ class SimulationController {
         value.labelFor = slider
         value.text = "${slider.valueProperty().get()} car/min"
         title.labelFor = value
-        slider.valueProperty().addListener { observable, oldValue, newValue ->
+        slider.valueProperty().addListener { _, _, newValue ->
             value.text = "${newValue.toInt()} car/min"
             updateSimulation()
 

@@ -1,4 +1,4 @@
-package sample.model.node;
+package sample.model.node.spawn;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -7,6 +7,7 @@ import sample.model.car.Car;
 import sample.model.car.CarFactory;
 import sample.model.car.CarId;
 import sample.model.car.CarType;
+import sample.model.node.*;
 import sample.model.node.spawn.SpawnStreamId;
 
 import javax.validation.constraints.NotNull;

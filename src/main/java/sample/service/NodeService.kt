@@ -1,9 +1,9 @@
 package sample.service
 
 import sample.dto.NodeDto
+import sample.infastructure.setNext
 import sample.model.node.NodeDirection
 import sample.model.node.NodeType
-import sample.infastructure.setNext
 
 class NodeService(var nodeSize: Double) {
     private val nodeMap = hashMapOf<Pair<Double, Double>, NodeDto>()
@@ -75,10 +75,10 @@ class NodeService(var nodeSize: Double) {
     }
 
     private fun getDeltaToNextHorizontalNode(direction: NodeDirection): Pair<Double, Double> = when (direction) {
-        NodeDirection.RIGHT ->  Pair(nodeSize, 0.0)
+        NodeDirection.RIGHT -> Pair(nodeSize, 0.0)
         NodeDirection.LEFT -> Pair(-nodeSize, 0.0)
-        NodeDirection.DOWN  ->  Pair(0.0, nodeSize)
-        NodeDirection.UP ->   Pair(0.0, -nodeSize)
+        NodeDirection.DOWN -> Pair(0.0, nodeSize)
+        NodeDirection.UP -> Pair(0.0, -nodeSize)
 
 
     }

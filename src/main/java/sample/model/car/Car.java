@@ -1,17 +1,14 @@
 package sample.model.car;
 
 
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.val;
 import lombok.var;
-import sample.model.node.Neighbors;
 import sample.model.node.Node;
 
 import java.util.*;
 import java.util.function.Function;
-import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -27,7 +24,7 @@ public class Car {
 
     public Car(final Node head, final int size, final Double maxSpeed) {
         this.id = CarId.of(UUID.randomUUID().toString());
-        this.accelerationFunction = speed -> 0.5;
+        this.accelerationFunction = speed -> (maxSpeed-speed)/size;
         this.head = head;
         this.size = size;
         this.maxSpeed = maxSpeed;
@@ -199,9 +196,21 @@ public class Car {
     }
 
     private Double acceleratedSpeed() {
-        return Stream.of(maxSpeed, currentSpeed + accelerationFunction.apply(currentSpeed),head.getMaxSpeedAllowed())
+
+        return Stream.of(maxSpeed, currentSpeed + accelerationFunction.apply(currentSpeed),maxSpeedAHead(head))
                 .min(Double::compareTo)
                 .get();
+    }
+
+    private Double maxSpeedAHead( Node node) {
+        int it = 0;
+        Set<Double> speed = new HashSet<>();
+        while (node!= null && it<=currentSpeed) {
+            speed.add(node.getMaxSpeedAllowed());
+            node = node.getNeighbors().getRight();
+            it++;
+        }
+        return speed.stream().min(Comparator.naturalOrder()).orElse(0.0);
     }
 
 

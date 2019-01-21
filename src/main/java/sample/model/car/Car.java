@@ -24,7 +24,7 @@ public class Car {
 
     public Car(final Node head, final int size, final Double maxSpeed) {
         this.id = CarId.of(UUID.randomUUID().toString());
-        this.accelerationFunction = speed -> (maxSpeed-speed)/size;
+        this.accelerationFunction = speed -> 0.5;
         this.head = head;
         this.size = size;
         this.maxSpeed = maxSpeed;

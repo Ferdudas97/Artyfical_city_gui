@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2643da0-afb9-4d40-9268-d8d3ec3b38fa" name="Default Changelist" comment="bugFix">
+    <list default="true" id="d2643da0-afb9-4d40-9268-d8d3ec3b38fa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/artGui.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/dto/dto.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/infastructure/infastructure.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/car.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/common/common.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/lights/lights.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/node.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/spawn.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/sample.plantuml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sample/service/service.plantuml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/controller/CanvasController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/CanvasController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/infastructure/ConnectorService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/infastructure/ConnectorMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/infastructure/NodeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/infastructure/NodeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sample/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/controller/SimulationController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/controller/SimulationController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/car/CarType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/model/car/CarType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/model/node/CrossroadNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,11 +27,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="75">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/SimulationController.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+              <folding>
+                <element signature="e#27#538#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/dto.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/CanvasController.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
+            <state relative-caret-position="2070">
               <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
               <folding>
                 <element signature="e#27#701#0" expanded="true" />
@@ -29,29 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="30" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/infastructure/ConnectorHelper.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="81" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/infastructure/NodeMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="255">
+              <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,67 +70,57 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStream.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
+            <state relative-caret-position="90">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#423#424#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-              <folding>
-                <element signature="e#24#289#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/infastructure/ConnectorMapper.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="24" column="99" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/BoardDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/sample/sample.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="240">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/spawn.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/lights/lights.plantuml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -155,13 +155,16 @@
       <find>size</find>
       <find>while</find>
       <find>childre</find>
+      <find>observ</find>
+      <find>paral</find>
+      <find>Observable</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="69f1724eb41a897ba8611f1cba9e5c8d497e3a97" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
@@ -190,9 +193,6 @@
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/NodeDirection.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/TrafficLightsNode.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/NodeType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/car/CarType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/lights/TrafficLightsHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/NodeId.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStream.java" />
@@ -201,18 +201,21 @@
         <option value="$PROJECT_DIR$/src/main/java/sample/ConnectorHelper.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/service/NodeMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/ConnectorService.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/CanvasController.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/dto/SimulationInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/service/ApiService.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/controller/SimulationController.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/sample/simulationBoard.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/controller/CanvasController.kt" />
         <option value="$PROJECT_DIR$/src/main/java/sample/infastructure/NodeMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/infastructure/ConnectorService.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/sample/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/car/CarType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/controller/SimulationController.kt" />
+        <option value="$PROJECT_DIR$/src/main/java/sample/model/car/Car.java" />
       </list>
     </option>
   </component>
@@ -251,6 +254,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -309,7 +314,48 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="infastructure" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="artGui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artGui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="car" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="artGui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artGui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="artGui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artGui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="artGui" type="b2602c69:ProjectViewProjectNode" />
+              <item name="artGui" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="node" type="462c0819:PsiDirectoryNode" />
+              <item name="spawn" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="artGui" type="b2602c69:ProjectViewProjectNode" />
@@ -343,21 +389,21 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="LombokPluginEnabledInProject" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545491435823" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547760808711" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Obrazy" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
@@ -483,9 +529,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.SimulationServiceImpl" />
         <item itemvalue="Application.NodeMapper" />
         <item itemvalue="Application.Car" />
-        <item itemvalue="Application.SimulationServiceImpl" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -509,6 +556,12 @@
       <workItem from="1545429860751" duration="2959000" />
       <workItem from="1545433047103" duration="6584000" />
       <workItem from="1545481192643" duration="6657000" />
+      <workItem from="1547676824505" duration="3252000" />
+      <workItem from="1547730825224" duration="386000" />
+      <workItem from="1547758057119" duration="2239000" />
+      <workItem from="1547821736619" duration="41000" />
+      <workItem from="1548000634248" duration="2532000" />
+      <workItem from="1548008871197" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="simulationController">
       <created>1544897639506</created>
@@ -601,11 +654,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545491074484</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="trafficlights">
+      <created>1547676325661</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1547676325661</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120994000" />
+    <option name="totallyTimeSpent" value="130627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -618,8 +678,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26065302" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29607084" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -628,7 +689,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975097" visible="true" weight="0.3925845" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975097" visible="true" weight="0.06434024" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -651,41 +712,8 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="PlantUML" order="10" weight="0.51909244" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.255119" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4975097" weight="0.3925845" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991276" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50249034" side_tool="true" weight="0.3925845" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4997233" weight="0.32824427" />
-      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4975097" weight="0.6019629" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Spring" order="14" weight="0.3293348" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.12174875" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -753,7 +781,8 @@
     <MESSAGE value="Synchornized" />
     <MESSAGE value="Traffic lights and connector added" />
     <MESSAGE value="bugFix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bugFix" />
+    <MESSAGE value="trafficlights" />
+    <option name="LAST_COMMIT_MESSAGE" value="trafficlights" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -775,6 +804,12 @@
           <line>19</line>
           <properties />
           <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/infastructure/ConnectorMapper.kt</url>
@@ -808,7 +843,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt</url>
-          <line>30</line>
+          <line>31</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
@@ -858,136 +893,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/SaveBoardRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/GetSavedBoardResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/TestHandler.kt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/RoadNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/Neighbors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/jdk1.8.0_191/javafx-src.zip!/com/sun/javafx/sg/prism/NGCanvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6836">
-          <caret line="1319" selection-start-line="1319" selection-end-line="1319" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/jdk1.8.0_191/src.zip!/java/lang/Long.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-          <folding>
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/lights.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/NodeDirection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sample/img/road_spawn.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://$USER_HOME$/jdk1.8.0_191/src.zip!/java/util/Iterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/NodeId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#187#188#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStreamId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/CrossroadNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/NodeType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sample/img/traffic_light_green.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -996,28 +901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="25" column="82" selection-start-line="25" selection-start-column="82" selection-end-line="25" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="788">
-          <caret line="135" column="13" selection-start-line="135" selection-start-column="8" selection-end-line="135" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="352">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1035,13 +920,6 @@
             <element signature="e#892#893#0" expanded="true" />
             <element signature="e#935#936#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/ApiService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -1076,28 +954,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/sample/img/road_corner3.png" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/sample/img/road_corner2.png" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/sample/img/road_corner.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/SimulationController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="159" column="5" selection-start-line="159" selection-start-column="5" selection-end-line="159" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sample/simulationBoard.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/lights/TrafficLightsNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,13 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/GetSavedBoardRequest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/ChangeSimulationDetailsRequest.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1122,34 +976,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/infastructure/ConnectorHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/jdk1.8.0_191/src.zip!/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/lights/TrafficLightsHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="135">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
             <element signature="e#414#415#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/infastructure/NodeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="675">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1158,72 +1013,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="285">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/BoardDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/infastructure/NodeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-          <folding>
-            <element signature="e#24#289#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/CanvasController.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
-          <folding>
-            <element signature="e#27#701#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sample/infastructure/ConnectorHelper.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="81" selection-start-line="2" selection-start-column="81" selection-end-line="2" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -1234,11 +1028,973 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/GetSavedBoardResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/BoardDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sample/sample.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+        <state relative-caret-position="1215">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/ApiService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding>
+            <element signature="e#24#561#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/car.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/service.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/node.plantuml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample.service">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.service</OriginalElement>
+          <nodes>
+            <node x="0.0" y="497.0">sample.service.CanvasService</node>
+            <node x="0.0" y="815.0">sample.service.ApiService</node>
+            <node x="705.0" y="497.0">sample.service.NodeService</node>
+            <node x="0.0" y="251.0">sample.service.SimulationServiceImpl</node>
+            <node x="0.0" y="0.0">sample.service.SimulationService</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sample.service.SimulationServiceImpl" target="sample.service.SimulationService">
+              <point x="0.0" y="-100.5" />
+              <point x="0.0" y="100.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="47.0" y="326.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample.model">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.model</OriginalElement>
+          <nodes>
+            <node x="21.5" y="800.0">sample.model.node.spawn.SpawnStream</node>
+            <node x="1314.0102458112865" y="718.0">sample.model.node.lights.TrafficLightsNode</node>
+            <node x="688.0260479654812" y="0.0">sample.model.node.NodeType</node>
+            <node x="492.00893014613223" y="718.0">sample.model.node.SpawnCarNode</node>
+            <node x="382.00893014613223" y="596.0">sample.model.car.CarFactory</node>
+            <node x="1442.3020416036766" y="800.0">sample.model.node.lights.TrafficLightsHolder</node>
+            <node x="29.79920792390999" y="892.0">sample.model.node.spawn.SpawnNodeHolder</node>
+            <node x="998.0260479654811" y="0.0">sample.model.node.NodePosition</node>
+            <node x="277.5922634794655" y="332.0">sample.model.car.CarHolder</node>
+            <node x="647.8079365079366" y="596.0">sample.model.car.CarFactory.CarCreator</node>
+            <node x="254.0" y="969.0">sample.model.node.SpawnCarNode.SpawnCarNodeBuilder</node>
+            <node x="832.3079365079366" y="332.0">sample.model.node.Node</node>
+            <node x="827.0260479654812" y="0.0">sample.model.node.NodeDirection</node>
+            <node x="89.03670792390994" y="596.0">sample.model.node.spawn.SpawnStreamId</node>
+            <node x="341.0922634794655" y="504.0">sample.model.car.Car</node>
+            <node x="1172.0102458112865" y="718.0">sample.model.node.RoadNode</node>
+            <node x="870.2172634794656" y="718.0">sample.model.node.CrossroadNode</node>
+            <node x="0.0" y="969.0">sample.model.node.lights.TrafficLightsNode.TrafficLightsNodeBuilder</node>
+            <node x="489.0" y="969.0">sample.model.node.RoadNode.RoadNodeBuilder</node>
+            <node x="580.8927146321479" y="0.0">sample.model.car.CarId</node>
+            <node x="1079.3852458112865" y="596.0">sample.model.node.Neighbors</node>
+            <node x="1203.9010479654812" y="0.0">sample.model.node.NodeId</node>
+            <node x="454.50893014613223" y="504.0">sample.model.car.CarType</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.node.NodePosition">
+              <point x="24.0" y="-16.0" />
+              <point x="594.0089301461322" y="648.0" />
+              <point x="604.3079365079366" y="648.0" />
+              <point x="604.3079365079366" y="414.0" />
+              <point x="724.3020416036768" y="414.0" />
+              <point x="724.3020416036768" y="242.0" />
+              <point x="1010.0260479654811" y="242.0" />
+              <point x="-60.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.CarFactory" target="sample.model.car.Car">
+              <point x="-49.599999999999966" y="-16.0" />
+              <point x="394.4089301461323" y="576.0" />
+              <point x="383.67559681279874" y="576.0" />
+              <point x="6.083333333333314" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsNode" target="sample.model.node.NodeType">
+              <point x="10.9375" y="-16.0" />
+              <point x="1412.4477458112865" y="698.0" />
+              <point x="1423.3227458112865" y="698.0" />
+              <point x="1423.3227458112865" y="102.0" />
+              <point x="797.1093812988146" y="102.0" />
+              <point x="49.58333333333337" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.car.Car">
+              <point x="-36.0" y="-16.0" />
+              <point x="534.0089301461322" y="668.0" />
+              <point x="371.50893014613223" y="668.0" />
+              <point x="-6.083333333333371" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.Node" target="sample.model.node.NodeType">
+              <point x="-13.049999999999955" y="-16.0" />
+              <point x="862.7579365079366" y="172.0" />
+              <point x="757.4427146321478" y="172.0" />
+              <point x="9.916666666666629" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.Node" target="sample.model.car.CarId">
+              <point x="-39.14999999999998" y="-16.0" />
+              <point x="836.6579365079366" y="202.0" />
+              <point x="633.4482701877034" y="202.0" />
+              <point x="9.555555555555571" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.car.CarId">
+              <point x="-48.0" y="-16.0" />
+              <point x="522.0089301461322" y="678.0" />
+              <point x="257.53670792390994" y="678.0" />
+              <point x="257.53670792390994" y="282.0" />
+              <point x="585.6704924099256" y="282.0" />
+              <point x="-38.22222222222223" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.spawn.SpawnNodeHolder" target="sample.model.car.Car">
+              <point x="-75.0" y="-16.0" />
+              <point x="44.79920792390999" y="872.0" />
+              <point x="0.0" y="872.0" />
+              <point x="0.0" y="566.0" />
+              <point x="347.17559681279886" y="566.0" />
+              <point x="-30.41666666666663" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.Node" target="sample.model.node.NodePosition">
+              <point x="13.049999999999955" y="-16.0" />
+              <point x="888.8579365079365" y="252.0" />
+              <point x="1034.0260479654812" y="252.0" />
+              <point x="-36.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.spawn.SpawnStream" target="sample.model.node.SpawnCarNode">
+              <point x="18.125" y="-16.0" />
+              <point x="112.125" y="770.0" />
+              <point x="518.0089301461322" y="770.0" />
+              <point x="-52.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.spawn.SpawnNodeHolder" target="sample.model.node.spawn.SpawnStreamId">
+              <point x="-45.0" y="-16.0" />
+              <point x="74.79920792390999" y="862.0" />
+              <point x="11.0" y="862.0" />
+              <point x="11.0" y="688.0" />
+              <point x="104.8367079239099" y="688.0" />
+              <point x="-63.200000000000045" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.RoadNode" target="sample.model.node.Neighbors">
+              <point x="-53.375" y="-16.0" />
+              <point x="1179.6352458112865" y="698.0" />
+              <point x="1155.6352458112865" y="698.0" />
+              <point x="15.25" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.CrossroadNode" target="sample.model.node.NodeType">
+              <point x="-52.33333333333326" y="-16.0" />
+              <point x="896.3839301461323" y="668.0" />
+              <point x="810.8079365079366" y="668.0" />
+              <point x="810.8079365079366" y="212.0" />
+              <point x="717.7760479654812" y="212.0" />
+              <point x="-29.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.car.CarFactory">
+              <point x="-24.0" y="-16.0" />
+              <point x="546.0089301461322" y="658.0" />
+              <point x="444.00893014613223" y="658.0" />
+              <point x="0.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.spawn.SpawnStream" target="sample.model.node.spawn.SpawnStreamId">
+              <point x="-18.125" y="-16.0" />
+              <point x="75.875" y="698.0" />
+              <point x="136.43670792391003" y="698.0" />
+              <point x="-31.59999999999991" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsNode" target="sample.model.node.NodePosition">
+              <point x="54.6875" y="-16.0" />
+              <point x="1456.1977458112865" y="688.0" />
+              <point x="1499.7395416036766" y="688.0" />
+              <point x="1499.7395416036766" y="82.0" />
+              <point x="1130.0260479654812" y="82.0" />
+              <point x="60.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.RoadNode" target="sample.model.node.NodeId">
+              <point x="53.375" y="-16.0" />
+              <point x="1286.3852458112865" y="698.0" />
+              <point x="1277.8852458112865" y="698.0" />
+              <point x="1277.8852458112865" y="122.0" />
+              <point x="1260.1510479654812" y="122.0" />
+              <point x="6.25" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.node.Node">
+              <point x="48.0" y="-16.0" />
+              <point x="618.0089301461322" y="668.0" />
+              <point x="626.3079365079366" y="668.0" />
+              <point x="626.3079365079366" y="464.0" />
+              <point x="856.7766865079366" y="464.0" />
+              <point x="-19.03125" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.node.spawn.SpawnStreamId">
+              <point x="-72.0" y="-16.0" />
+              <point x="498.00893014613223" y="698.0" />
+              <point x="199.63670792390985" y="698.0" />
+              <point x="31.59999999999991" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.Node" target="sample.model.node.Neighbors">
+              <point x="13.59375" y="16.0" />
+              <point x="889.4016865079366" y="434.0" />
+              <point x="1155.2185791446198" y="434.0" />
+              <point x="1155.2185791446198" y="576.0" />
+              <point x="1140.3852458112865" y="576.0" />
+              <point x="0.0" y="-16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsNode" target="sample.model.node.NodeId">
+              <point x="76.5625" y="-16.0" />
+              <point x="1478.0727458112865" y="698.0" />
+              <point x="1510.7395416036766" y="698.0" />
+              <point x="1510.7395416036766" y="72.0" />
+              <point x="1272.6510479654812" y="72.0" />
+              <point x="18.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.node.NodeType">
+              <point x="0.0" y="-16.0" />
+              <point x="570.0089301461322" y="394.0" />
+              <point x="634.8927146321479" y="394.0" />
+              <point x="634.8927146321479" y="212.0" />
+              <point x="697.9427146321478" y="212.0" />
+              <point x="-49.58333333333337" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.spawn.SpawnNodeHolder" target="sample.model.node.SpawnCarNode">
+              <point x="75.0" y="-16.0" />
+              <point x="194.79920792391" y="872.0" />
+              <point x="622.0089301461322" y="872.0" />
+              <point x="52.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.Car" target="sample.model.node.Node">
+              <point x="31.285714285714278" y="-16.0" />
+              <point x="408.8779777651797" y="434.0" />
+              <point x="840.4641865079366" y="434.0" />
+              <point x="-35.34375" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.CarFactory.CarCreator" target="sample.model.car.Car">
+              <point x="-31.25" y="-16.0" />
+              <point x="679.0579365079366" y="556.0" />
+              <point x="408.0089301461321" y="556.0" />
+              <point x="30.416666666666657" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.CrossroadNode" target="sample.model.node.NodePosition">
+              <point x="34.888888888888914" y="-16.0" />
+              <point x="983.6061523683545" y="668.0" />
+              <point x="1057.8852458112865" y="668.0" />
+              <point x="1057.8852458112865" y="272.0" />
+              <point x="1082.0260479654812" y="272.0" />
+              <point x="12.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsHolder" target="sample.model.node.lights.TrafficLightsNode">
+              <point x="-69.375" y="-16.0" />
+              <point x="1465.4270416036766" y="780.0" />
+              <point x="1357.7602458112865" y="780.0" />
+              <point x="-43.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.CarHolder" target="sample.model.car.CarId">
+              <point x="0.0" y="-16.0" />
+              <point x="337.5922634794655" y="302.0" />
+              <point x="604.7816035210368" y="302.0" />
+              <point x="-19.111111111111114" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.Car" target="sample.model.car.CarId">
+              <point x="10.428571428571445" y="-16.0" />
+              <point x="388.02083490803693" y="414.0" />
+              <point x="417.7911981922389" y="414.0" />
+              <point x="417.7911981922389" y="312.0" />
+              <point x="614.3371590765923" y="312.0" />
+              <point x="-9.555555555555543" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.CrossroadNode" target="sample.model.car.CarId">
+              <point x="-69.77777777777783" y="-16.0" />
+              <point x="878.9394857016878" y="678.0" />
+              <point x="783.3079365079366" y="678.0" />
+              <point x="783.3079365079366" y="384.0" />
+              <point x="623.8927146321479" y="384.0" />
+              <point x="0.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.CarFactory" target="sample.model.car.CarType">
+              <point x="24.80000000000001" y="-16.0" />
+              <point x="468.80893014613224" y="576.0" />
+              <point x="472.00893014613223" y="576.0" />
+              <point x="-35.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.CrossroadNode" target="sample.model.node.NodeDirection">
+              <point x="-34.888888888888914" y="-16.0" />
+              <point x="913.8283745905767" y="658.0" />
+              <point x="821.8079365079366" y="658.0" />
+              <point x="821.8079365079366" y="232.0" />
+              <point x="864.7760479654812" y="232.0" />
+              <point x="-37.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.CrossroadNode" target="sample.model.node.Neighbors">
+              <point x="69.77777777777783" y="-16.0" />
+              <point x="1018.4950412572434" y="698.0" />
+              <point x="1125.1352458112865" y="698.0" />
+              <point x="-15.25" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.CarFactory.CarCreator" target="sample.model.node.Node">
+              <point x="31.25" y="-16.0" />
+              <point x="741.5579365079366" y="474.0" />
+              <point x="862.2141865079366" y="474.0" />
+              <point x="-13.59375" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.RoadNode" target="sample.model.node.NodeDirection">
+              <point x="22.875" y="-16.0" />
+              <point x="1255.8852458112865" y="142.0" />
+              <point x="940.2760479654812" y="142.0" />
+              <point x="37.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.CrossroadNode" target="sample.model.node.Node">
+              <point x="-17.444444444444457" y="-16.0" />
+              <point x="931.272819035021" y="678.0" />
+              <point x="937.7172634794656" y="678.0" />
+              <point x="937.7172634794656" y="474.0" />
+              <point x="867.6516865079366" y="474.0" />
+              <point x="-8.15625" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.Car" target="sample.model.car.CarHolder">
+              <point x="-20.85714285714286" y="-16.0" />
+              <point x="356.7351206223226" y="474.0" />
+              <point x="297.5922634794655" y="474.0" />
+              <point x="-40.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.node.NodeId">
+              <point x="60.0" y="-16.0" />
+              <point x="630.0089301461322" y="678.0" />
+              <point x="637.3079365079366" y="678.0" />
+              <point x="637.3079365079366" y="484.0" />
+              <point x="982.9412698412699" y="484.0" />
+              <point x="982.9412698412699" y="302.0" />
+              <point x="1235.1510479654812" y="302.0" />
+              <point x="-18.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsNode" target="sample.model.node.NodeDirection">
+              <point x="32.8125" y="-16.0" />
+              <point x="1434.3227458112865" y="678.0" />
+              <point x="1467.4082357016878" y="678.0" />
+              <point x="1467.4082357016878" y="92.0" />
+              <point x="965.442714632148" y="92.0" />
+              <point x="62.91666666666674" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.node.Neighbors">
+              <point x="72.0" y="-16.0" />
+              <point x="642.0089301461322" y="688.0" />
+              <point x="1094.6352458112865" y="688.0" />
+              <point x="-45.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsNode" target="sample.model.node.Node">
+              <point x="-54.6875" y="-16.0" />
+              <point x="1346.2289958112865" y="394.0" />
+              <point x="911.1516865079366" y="394.0" />
+              <point x="35.34375" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.Node" target="sample.model.node.NodeDirection">
+              <point x="4.350000000000023" y="-16.0" />
+              <point x="880.1579365079366" y="232.0" />
+              <point x="915.1093812988146" y="232.0" />
+              <point x="12.583333333333371" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsHolder" target="sample.model.node.NodeId">
+              <point x="69.375" y="-16.0" />
+              <point x="1604.1770416036766" y="780.0" />
+              <point x="1597.5520416036766" y="780.0" />
+              <point x="1597.5520416036766" y="52.0" />
+              <point x="1297.6510479654812" y="52.0" />
+              <point x="43.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.spawn.SpawnStream" target="sample.model.car.Car">
+              <point x="-54.375" y="-16.0" />
+              <point x="39.625" y="780.0" />
+              <point x="64.875" y="780.0" />
+              <point x="64.875" y="576.0" />
+              <point x="359.3422634794655" y="576.0" />
+              <point x="-18.25" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.spawn.SpawnNodeHolder" target="sample.model.node.spawn.SpawnStream">
+              <point x="15.0" y="-16.0" />
+              <point x="134.79920792391" y="872.0" />
+              <point x="130.25" y="872.0" />
+              <point x="36.25" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.CarHolder" target="sample.model.car.Car">
+              <point x="40.0" y="16.0" />
+              <point x="0.0" y="-16.0" />
+            </edge>
+            <edge source="sample.model.node.RoadNode" target="sample.model.node.NodePosition">
+              <point x="38.125" y="-16.0" />
+              <point x="1271.1352458112865" y="698.0" />
+              <point x="1266.8852458112865" y="698.0" />
+              <point x="1266.8852458112865" y="132.0" />
+              <point x="1106.0260479654812" y="132.0" />
+              <point x="36.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.node.NodeDirection">
+              <point x="12.0" y="-16.0" />
+              <point x="581.0089301461322" y="404.0" />
+              <point x="645.8927146321479" y="404.0" />
+              <point x="645.8927146321479" y="222.0" />
+              <point x="839.6093812988146" y="222.0" />
+              <point x="-62.91666666666663" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.RoadNode" target="sample.model.car.CarId">
+              <point x="-7.625" y="-16.0" />
+              <point x="1225.3852458112865" y="698.0" />
+              <point x="1233.8852458112865" y="698.0" />
+              <point x="1233.8852458112865" y="162.0" />
+              <point x="652.5593812988145" y="162.0" />
+              <point x="28.666666666666686" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.car.CarType">
+              <point x="-12.0" y="-16.0" />
+              <point x="558.0089301461322" y="648.0" />
+              <point x="542.0089301461322" y="648.0" />
+              <point x="35.0" y="16.0" />
+            </edge>
+            <edge source="sample.model.car.CarFactory" target="sample.model.node.Node">
+              <point x="0.0" y="-16.0" />
+              <point x="444.00893014613223" y="444.0" />
+              <point x="845.9016865079366" y="444.0" />
+              <point x="-29.90625" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsNode" target="sample.model.node.Neighbors">
+              <point x="-76.5625" y="-16.0" />
+              <point x="1324.9477458112865" y="668.0" />
+              <point x="1186.1352458112865" y="668.0" />
+              <point x="45.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.Node" target="sample.model.node.NodeId">
+              <point x="39.14999999999998" y="-16.0" />
+              <point x="914.9579365079366" y="292.0" />
+              <point x="1222.6510479654812" y="292.0" />
+              <point x="-31.25" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsNode" target="sample.model.car.CarId">
+              <point x="-10.9375" y="-16.0" />
+              <point x="1390.5727458112865" y="688.0" />
+              <point x="1412.3227458112865" y="688.0" />
+              <point x="1412.3227458112865" y="112.0" />
+              <point x="662.1149368543702" y="112.0" />
+              <point x="38.22222222222223" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.RoadNode" target="sample.model.node.Node">
+              <point x="-22.875" y="-16.0" />
+              <point x="1210.1352458112865" y="688.0" />
+              <point x="1222.8852458112865" y="688.0" />
+              <point x="1222.8852458112865" y="404.0" />
+              <point x="905.7141865079366" y="404.0" />
+              <point x="29.90625" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.CrossroadNode" target="sample.model.node.NodeId">
+              <point x="52.33333333333337" y="-16.0" />
+              <point x="1001.0505968127989" y="678.0" />
+              <point x="1068.8852458112865" y="678.0" />
+              <point x="1068.8852458112865" y="312.0" />
+              <point x="1247.6510479654812" y="312.0" />
+              <point x="-6.25" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.Neighbors" target="sample.model.node.Node">
+              <point x="-40.66666666666663" y="-16.0" />
+              <point x="1099.7185791446198" y="576.0" />
+              <point x="1119.4685791446198" y="576.0" />
+              <point x="1119.4685791446198" y="444.0" />
+              <point x="883.9641865079366" y="444.0" />
+              <point x="8.15625" y="16.0" />
+            </edge>
+            <edge source="sample.model.node.RoadNode" target="sample.model.node.NodeType">
+              <point x="7.625" y="-16.0" />
+              <point x="1240.6352458112865" y="698.0" />
+              <point x="1244.8852458112865" y="698.0" />
+              <point x="1244.8852458112865" y="152.0" />
+              <point x="777.2760479654812" y="152.0" />
+              <point x="29.75" y="16.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7322074788902292" x="318.0" y="291.0" />
+          <SelectedNodes>
+            <node>sample.model.node.spawn.SpawnStreamId</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample</OriginalElement>
+          <nodes>
+            <node x="294.51138044405104" y="547.96875">sample.dto.SaveBoardRequest</node>
+            <node x="151.0" y="890.96875">sample.Main</node>
+            <node x="77.1636047979801" y="547.96875">sample.infastructure.NodeMapper</node>
+            <node x="0.0" y="813.96875">sample.infastructure.ConnectorMapperKt</node>
+            <node x="309.0" y="736.96875">sample.dto.GetSavedBoardRequest</node>
+            <node x="219.0" y="813.96875">sample.controller.CanvasController</node>
+            <node x="0.0" y="736.96875">sample.dto.ChangeSimulationDetailsRequest</node>
+            <node x="786.0" y="736.96875">sample.controller.SimulationController</node>
+            <node x="956.0" y="813.96875">sample.service.ApiService.Companion</node>
+            <node x="816.5113804440512" y="547.96875">sample.service.SimulationService</node>
+            <node x="614.0" y="813.96875">sample.service.CanvasService</node>
+            <node x="269.61896194083727" y="281.96875">sample.dto.NodeDto.NodeDtoBuilder</node>
+            <node x="551.0" y="736.96875">sample.dto.SimulationResponse</node>
+            <node x="240.80646194083727" y="373.96875">sample.dto.NodeDto</node>
+            <node x="791.0" y="813.96875">sample.service.NodeService</node>
+            <node x="107.77994105011163" y="7.96875">sample.model.car</node>
+            <node x="136.67994105011164" y="149.96875">sample.model.node</node>
+            <node x="71.76138044405104" y="465.96875">sample.infastructure.NodeMapper.NeighboursSetter</node>
+            <node x="417.0" y="813.96875">sample.infastructure.ConnectorHelper</node>
+            <node x="494.5113804440511" y="547.96875">sample.dto.GetSavedBoardResponse</node>
+            <node x="0.0" y="890.96875">sample.service.ApiService</node>
+            <node x="591.8520103633741" y="659.96875">sample.service.SimulationServiceImpl</node>
+            <node x="924.0113804440512" y="465.96875">sample.dto.SimulationInfo</node>
+            <node x="430.8863804440511" y="465.96875">sample.dto.BoardDto</node>
+            <node x="738.5113804440512" y="465.96875">sample.model.common</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sample.service.SimulationService" target="sample.model.node">
+              <point x="0.0" y="-16.0" />
+              <point x="903.0113804440512" y="241.96875" />
+              <point x="259.8163046864753" y="241.96875" />
+              <point x="58.636363636363626" y="16.0" />
+            </edge>
+            <edge source="sample.infastructure.NodeMapper.NeighboursSetter" target="sample.dto.NodeDto">
+              <point x="43.25" y="-16.0" />
+              <point x="201.51138044405104" y="445.96875" />
+              <point x="248.87789051226582" y="445.96875" />
+              <point x="-48.428571428571445" y="16.0" />
+            </edge>
+            <edge source="sample.dto.SaveBoardRequest" target="sample.dto.BoardDto">
+              <point x="45.0" y="-16.0" />
+              <point x="429.51138044405104" y="527.96875" />
+              <point x="475.1363804440511" y="527.96875" />
+              <point x="-14.75" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationService" target="sample.model.common">
+              <point x="-57.66666666666666" y="-16.0" />
+              <point x="845.3447137773845" y="527.96875" />
+              <point x="854.0113804440512" y="527.96875" />
+              <point x="38.5" y="16.0" />
+            </edge>
+            <edge source="sample.infastructure.NodeMapper" target="sample.infastructure.NodeMapper.NeighboursSetter">
+              <point x="0.0" y="-16.0" />
+              <point x="147.1636047979801" y="527.96875" />
+              <point x="158.26138044405104" y="527.96875" />
+              <point x="0.0" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationServiceImpl" target="sample.dto.NodeDto">
+              <point x="-22.555555555555543" y="-16.0" />
+              <point x="670.7964548078186" y="609.96875" />
+              <point x="284.01138044405104" y="609.96875" />
+              <point x="284.01138044405104" y="445.96875" />
+              <point x="297.30646194083727" y="445.96875" />
+              <point x="0.0" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationServiceImpl" target="sample.dto.SimulationInfo">
+              <point x="67.66666666666669" y="-16.0" />
+              <point x="761.0186770300409" y="629.96875" />
+              <point x="1000.0113804440512" y="629.96875" />
+              <point x="0.0" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationServiceImpl" target="sample.model.node">
+              <point x="-67.66666666666669" y="-16.0" />
+              <point x="625.6853436967074" y="629.96875" />
+              <point x="32.51138044405104" y="629.96875" />
+              <point x="32.51138044405104" y="231.96875" />
+              <point x="165.99812286829345" y="231.96875" />
+              <point x="-35.18181818181819" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationServiceImpl" target="sample.model.car">
+              <point x="-90.22222222222223" y="-16.0" />
+              <point x="603.129788141152" y="639.96875" />
+              <point x="0.0" y="639.96875" />
+              <point x="0.0" y="109.96875" />
+              <point x="159.52994105011163" y="109.96875" />
+              <point x="-5.75" y="16.0" />
+            </edge>
+            <edge source="sample.dto.BoardDto" target="sample.dto.NodeDto">
+              <point x="-29.5" y="-16.0" />
+              <point x="460.3863804440511" y="445.96875" />
+              <point x="313.4493190836944" y="445.96875" />
+              <point x="16.14285714285711" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationServiceImpl" target="sample.service.SimulationService">
+              <point x="45.111111111111086" y="-16.0" />
+              <point x="738.4631214744852" y="619.96875" />
+              <point x="903.0113804440512" y="619.96875" />
+              <point x="0.0" y="16.0" />
+            </edge>
+            <edge source="sample.dto.NodeDto" target="sample.dto.NodeDto.NodeDtoBuilder">
+              <point x="9.416666666666629" y="-16.0" />
+              <point x="306.7231286075039" y="333.96875" />
+              <point x="330.74396194083727" y="333.96875" />
+              <point x="-20.375" y="16.0" />
+            </edge>
+            <edge source="sample.dto.GetSavedBoardResponse" target="sample.dto.BoardDto">
+              <point x="55.75" y="-16.0" />
+              <point x="661.7613804440512" y="517.96875" />
+              <point x="534.1363804440512" y="517.96875" />
+              <point x="44.25" y="16.0" />
+            </edge>
+            <edge source="sample.dto.NodeDto" target="sample.model.node">
+              <point x="-47.08333333333337" y="-16.0" />
+              <point x="250.2231286075039" y="353.96875" />
+              <point x="212.90721377738438" y="353.96875" />
+              <point x="11.727272727272748" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationServiceImpl" target="sample.infastructure.NodeMapper">
+              <point x="-45.111111111111114" y="-16.0" />
+              <point x="648.240899252263" y="619.96875" />
+              <point x="147.1636047979801" y="619.96875" />
+              <point x="0.0" y="16.0" />
+            </edge>
+            <edge source="sample.dto.NodeDto.NodeDtoBuilder" target="sample.model.node">
+              <point x="-40.75" y="-16.0" />
+              <point x="310.36896194083727" y="261.96875" />
+              <point x="236.36175923192977" y="261.96875" />
+              <point x="35.18181818181813" y="16.0" />
+            </edge>
+            <edge source="sample.infastructure.NodeMapper" target="sample.dto.NodeDto">
+              <point x="56.0" y="-16.0" />
+              <point x="203.1636047979801" y="527.96875" />
+              <point x="266.26138044405104" y="527.96875" />
+              <point x="266.26138044405104" y="435.96875" />
+              <point x="281.16360479798016" y="435.96875" />
+              <point x="-16.14285714285711" y="16.0" />
+            </edge>
+            <edge source="sample.infastructure.NodeMapper" target="sample.model.node">
+              <point x="-56.0" y="-16.0" />
+              <point x="91.1636047979801" y="527.96875" />
+              <point x="50.26138044405104" y="527.96875" />
+              <point x="50.26138044405104" y="241.96875" />
+              <point x="177.7253955955662" y="241.96875" />
+              <point x="-23.45454545454544" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationServiceImpl" target="sample.model.common">
+              <point x="22.555555555555543" y="-16.0" />
+              <point x="715.9075659189297" y="609.96875" />
+              <point x="777.0113804440512" y="609.96875" />
+              <point x="-38.5" y="16.0" />
+            </edge>
+            <edge source="sample.dto.NodeDto.NodeDtoBuilder" target="sample.dto.NodeDto">
+              <point x="20.375" y="16.0" />
+              <point x="371.49396194083727" y="343.96875" />
+              <point x="325.55646194083727" y="343.96875" />
+              <point x="28.25" y="-16.0" />
+            </edge>
+            <edge source="sample.infastructure.NodeMapper.NeighboursSetter" target="sample.model.node">
+              <point x="-43.25" y="-16.0" />
+              <point x="115.01138044405107" y="261.96875" />
+              <point x="201.17994105011164" y="261.96875" />
+              <point x="0.0" y="16.0" />
+            </edge>
+            <edge source="sample.service.SimulationService" target="sample.dto.SimulationInfo">
+              <point x="57.66666666666666" y="-16.0" />
+              <point x="960.6780471107178" y="527.96875" />
+              <point x="949.3447137773845" y="527.96875" />
+              <point x="-50.666666666666664" y="16.0" />
+            </edge>
+            <edge source="sample.model.node" target="sample.model.car">
+              <point x="-51.60000000000002" y="-16.0" />
+              <point x="149.57994105011161" y="119.96875" />
+              <point x="171.02994105011163" y="119.96875" />
+              <point x="5.75" y="16.0" />
+            </edge>
+            <edge source="sample.model.node" target="sample.model.node">
+              <point x="-46.90909090909091" y="16.0" />
+              <point x="154.27085014102073" y="211.96875" />
+              <point x="106.67994105011164" y="211.96875" />
+              <point x="106.67994105011164" y="157.96875" />
+              <point x="-64.5" y="-8.0" />
+            </edge>
+            <edge source="sample.model.car" target="sample.model.node">
+              <point x="40.25" y="16.0" />
+              <point x="205.52994105011163" y="119.96875" />
+              <point x="226.9799410501116" y="119.96875" />
+              <point x="25.799999999999955" y="-16.0" />
+            </edge>
+            <edge source="sample.model.car" target="sample.model.car">
+              <point x="-28.75" y="16.0" />
+              <point x="136.52994105011163" y="79.96875" />
+              <point x="67.77994105011163" y="79.96875" />
+              <point x="67.77994105011163" y="19.96875" />
+              <point x="-57.5" y="-4.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="108.0" y="365.0" />
+          <SelectedNodes>
+            <node>sample.controller.CanvasController</node>
+          </SelectedNodes>
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/sample.model.car">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.model.car</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">sample.model.car.Car</node>
+            <node x="0.0" y="270.0">sample.model.car.CarFactory</node>
+            <node x="0.0" y="477.0">sample.model.car.CarId</node>
+            <node x="98.0" y="376.0">sample.model.car.CarFactory.CarCreator</node>
+            <node x="271.0" y="477.0">sample.model.car.CarType</node>
+            <node x="451.0" y="270.0">sample.model.car.CarHolder</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sample.model.car.CarFactory.CarCreator" target="sample.model.car.CarFactory">
+              <point x="0.0" y="-28.0" />
+              <point x="0.0" y="28.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.9696969696969697" x="17.0" y="228.0" />
+          <SelectedNodes>
+            <node>sample.model.car.CarHolder</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/lights/TrafficLightsNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/GetSavedBoardRequest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/CrossroadNode.java" />
+    <entry file="uml://JAVA/sample.model.node">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>sample.model.node</OriginalElement>
+          <nodes>
+            <node x="372.0" y="741.0">sample.model.node.spawn.SpawnStream</node>
+            <node x="578.0" y="286.5">sample.model.node.lights.TrafficLightsNode</node>
+            <node x="271.0" y="939.0">sample.model.node.NodeType</node>
+            <node x="272.0" y="274.0">sample.model.node.SpawnCarNode</node>
+            <node x="0.0" y="1113.0">sample.model.node.lights.TrafficLightsHolder</node>
+            <node x="782.0" y="939.0">sample.model.node.spawn.SpawnNodeHolder</node>
+            <node x="446.0" y="939.0">sample.model.node.NodePosition</node>
+            <node x="300.5" y="0.0">sample.model.node.Node</node>
+            <node x="471.0" y="424.0">sample.model.node.NodeDirection</node>
+            <node x="862.0" y="741.0">sample.model.node.spawn.SpawnStreamId</node>
+            <node x="0.0" y="298.5">sample.model.node.RoadNode</node>
+            <node x="0.0" y="424.0">sample.model.node.lights.TrafficLightsNode.TrafficLightsNodeBuilder</node>
+            <node x="0.0" y="741.0">sample.model.node.Neighbors</node>
+            <node x="0.0" y="939.0">sample.model.node.NodeId</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="sample.model.node.RoadNode" target="sample.model.node.Node">
+              <point x="0.0" y="-28.0" />
+              <point x="126.0" y="249.0" />
+              <point x="338.6666666666667" y="249.0" />
+              <point x="-76.33333333333331" y="112.0" />
+            </edge>
+            <edge source="sample.model.node.lights.TrafficLightsNode" target="sample.model.node.Node">
+              <point x="0.0" y="-40.0" />
+              <point x="730.5" y="249.0" />
+              <point x="491.33333333333326" y="249.0" />
+              <point x="76.33333333333326" y="112.0" />
+            </edge>
+            <edge source="sample.model.node.SpawnCarNode" target="sample.model.node.Node">
+              <point x="0.0" y="-52.5" />
+              <point x="0.0" y="112.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7238017871649066" x="562.0" y="606.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>public</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/NodeService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/RoadNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/SimulationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="65" column="67" selection-start-line="65" selection-start-column="67" selection-end-line="65" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/service/CanvasService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding>
+            <element signature="e#24#289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/SimulationController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="e#27#538#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/dto/dto.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/controller/CanvasController.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="157" column="28" selection-start-line="157" selection-start-column="28" selection-end-line="157" selection-end-column="28" />
+          <folding>
+            <element signature="e#27#701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/SpawnNodeHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/CarType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/spawn/spawn.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/node/lights/lights.plantuml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sample/model/car/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -26,7 +26,8 @@ class NodeService(var nodeSize: Double) {
         }
         nodeMap.values.filter { it.nodeType == NodeType.CONNECTOR }
                 .forEach {
-                    setNext(it, getNextNode(node = it, delta = getDeltaToNextHorizontalNode(it.direction)))
+                    setNext(it, getNextNode(node = it,
+                            delta = getDeltaToNextHorizontalNode(it.direction)))
                 }
     }
 
@@ -85,5 +86,6 @@ class NodeService(var nodeSize: Double) {
 
     private fun checkSpawnDirection(direction: NodeDirection, comparedNode: NodeDto) =
             comparedNode.nodeType == NodeType.SPAWN && comparedNode.direction == direction
+
 
 }

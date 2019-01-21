@@ -20,8 +20,8 @@ public enum  CarType {
 
     private static int random() {
         val r = random.nextInt(100);
-        if (r<10) return 0;
-        if (r<90) return 1;
+        if (r<8) return 0;
+        if (r<98) return 1;
         if (r<100) return 2;
 
         return 0;

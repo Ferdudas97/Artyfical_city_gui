@@ -55,7 +55,7 @@ class SimulationController {
         val vBox = VBox()
         val value = Label()
         val title = Label("Simulation speed: ")
-        val slider = Slider(0.0, 5.0, 1.0)
+        val slider = Slider(1.0, 5.0, 1.0)
         vBox.spacing = 5.0
         slider.orientation = Orientation.HORIZONTAL
         value.labelFor = slider
@@ -76,7 +76,7 @@ class SimulationController {
         val vBox = VBox()
         val value = Label()
         val title = Label("Stream: $it")
-        val slider = Slider(0.0, 200.0, 10.0)
+        val slider = Slider(1.0, 100.0, 50.0)
         vBox.spacing = 5.0
         slider.orientation = Orientation.HORIZONTAL
         value.labelFor = slider
@@ -92,6 +92,7 @@ class SimulationController {
         sliders[sliderId] = slider
     }
 
+    @Synchronized
     private fun updateSimulation() {
         if (simulationButton.text == "Stop simulation") {
             simulationService.stopSimulation()
@@ -127,12 +128,10 @@ class SimulationController {
 
             simulationService.changeSimulationInfo(prepareSimulationDetails())
             simulationService.startSimulation().subscribe {
-                nodeService.getAllNodes().parallelStream().filter { it.nodeType !== NodeType.LIGHTS }.forEach { node ->
+                nodeService.getAllNodes().stream().filter { it.nodeType !== NodeType.LIGHTS }.forEach { node ->
                     canvasService.drawNode(node.nodeType, node.direction, node.horizontalPosition, node.verticalPosition)
-
                 }
-
-                simulationService.headAndSizes().entries.parallelStream().forEach { e ->
+                simulationService.headAndSizes().entries.stream().forEach { e ->
                     canvasService.drawCar(e.key,
                             e.value.second, nodeService.getNode(e.value.first.horiziontalPosition, e.value.first.verticalPosition)!!)
 

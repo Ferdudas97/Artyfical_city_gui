@@ -1,0 +1,234 @@
+@startuml
+
+title __NODE's Class Diagram__\n
+
+  package sample {
+    package sample.model.node {
+      class CrossroadNode {
+          + CrossroadNode()
+          - connectRight()
+          - disConnectRight()
+          - connectTop()
+          - disConnectTop()
+          - connectBottom()
+          - disConnectBottom()
+          + getLeft()
+          + getRight()
+          + getTop()
+          + getBottom()
+          + setLeft()
+          + setRight()
+          + setTop()
+          + setBottom()
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      class Neighbors {
+          - Neighbors()
+          {static} + of()
+          + getTop()
+          + getLeft()
+          + getRight()
+          + getBottom()
+          + setTop()
+          + setLeft()
+          + setRight()
+          + setBottom()
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      abstract class Node {
+          - isTaken : Boolean
+          - maxSpeedAllowed : Double
+          + Node()
+          + getType()
+          + getId()
+          + getDirection()
+          + getIsTaken()
+          + getNeighbors()
+          + getMaxSpeedAllowed()
+          + getPosition()
+          + getCarId()
+          + setType()
+          + setId()
+          + setDirection()
+          + setIsTaken()
+          + setNeighbors()
+          + setMaxSpeedAllowed()
+          + setPosition()
+          + setCarId()
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      enum NodeDirection {
+        LEFT
+        RIGHT
+        UP
+        DOWN
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      class NodeId {
+          - id : String
+          - NodeId()
+          {static} + of()
+          + equals()
+          # canEqual()
+          + hashCode()
+          + getId()
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      class NodePosition {
+          - horiziontalPosition : Double
+          - verticalPosition : Double
+          + getHoriziontalPosition()
+          + getVerticalPosition()
+          - NodePosition()
+          {static} + of()
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      enum NodeType {
+        ROAD
+        CONNECTOR
+        SPAWN
+        LIGHTS
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      class RoadNode {
+          + RoadNode()
+          {static} + builder()
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      class RoadNodeBuilder {
+          - isTaken : Boolean
+          - maxSpeedAllowed : Double
+          ~ RoadNodeBuilder()
+          + type()
+          + id()
+          + isTaken()
+          + neighbors()
+          + maxSpeedAllowed()
+          + position()
+          + carId()
+          + direction()
+          + build()
+          + toString()
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      class SpawnCarNode {
+          + spawnCar()
+          + SpawnCarNode()
+          + getSpawnStreamId()
+          + setSpawnStreamId()
+          {static} + builder()
+      }
+    }
+  }
+  
+
+  package sample {
+    package sample.model.node {
+      class SpawnCarNodeBuilder {
+          - isTaken : Boolean
+          - maxSpeedAllowed : Double
+          ~ SpawnCarNodeBuilder()
+          + type()
+          + id()
+          + isTaken()
+          + neighbors()
+          + maxSpeedAllowed()
+          + position()
+          + carId()
+          + spawnStreamId()
+          + direction()
+          + build()
+          + toString()
+      }
+    }
+  }
+  
+
+  CrossroadNode -up-|> Node
+  CrossroadNode o-- Node : left
+  CrossroadNode o-- Node : right
+  CrossroadNode o-- Node : top
+  CrossroadNode o-- Node : bottom
+  Neighbors o-- Node : top
+  Neighbors o-- Node : left
+  Neighbors o-- Node : right
+  Neighbors o-- Node : bottom
+  Node o-- NodeType : type
+  Node o-- NodeId : id
+  Node o-- NodeDirection : direction
+  Node o-- Neighbors : neighbors
+  Node o-- NodePosition : position
+  Node o-- CarId : carId
+  RoadNode -up-|> Node
+  RoadNode +-down- RoadNodeBuilder
+  RoadNodeBuilder o-- NodeType : type
+  RoadNodeBuilder o-- NodeId : id
+  RoadNodeBuilder o-- Neighbors : neighbors
+  RoadNodeBuilder o-- NodePosition : position
+  RoadNodeBuilder o-- CarId : carId
+  RoadNodeBuilder o-- NodeDirection : direction
+  SpawnCarNode -up-|> Node
+  SpawnCarNode o-- SpawnStreamId : spawnStreamId
+  SpawnCarNode +-down- SpawnCarNodeBuilder
+  SpawnCarNodeBuilder o-- NodeType : type
+  SpawnCarNodeBuilder o-- NodeId : id
+  SpawnCarNodeBuilder o-- Neighbors : neighbors
+  SpawnCarNodeBuilder o-- NodePosition : position
+  SpawnCarNodeBuilder o-- CarId : carId
+  SpawnCarNodeBuilder o-- SpawnStreamId : spawnStreamId
+  SpawnCarNodeBuilder o-- NodeDirection : direction
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
